@@ -42,7 +42,7 @@ SMBIOS_TABLE_TYPE4 mProcessorInfoType4_a55 = {
     0xFFFF,                // L3CacheHandle;    (no separate L3 on 850)
     0,                     // SerialNumber;
     0,                     // AssetTag;
-    0,                     // PartNumber;
+    7,                     // PartNumber;
     8,                     // CoreCount;        (8x A55)
     8,                     // EnabledCoreCount;
     0,                     // ThreadCount;      (no SMT)

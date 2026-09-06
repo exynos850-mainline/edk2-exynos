@@ -32,6 +32,18 @@ TimerConstructor (
   // Check if the ARM Generic Timer Extension is implemented.
   //
   if (ArmIsArchTimerImplemented ()) {
+
+    // If running at/through EL2, permit EL1/EL0 access to the physical
+    // counter and zero the virtual offset, so CNTPCT_EL0 reads don't trap.
+    if (ArmReadCurrentEL () == AARCH64_EL2) {
+      UINT64  CntHctl;
+
+      __asm__ volatile ("mrs %0, cnthctl_el2" : "=r" (CntHctl));
+      CntHctl |= 0x3; // EL1PCTEN | EL1PCEN
+      __asm__ volatile ("msr cnthctl_el2, %0" :: "r" (CntHctl));
+      __asm__ volatile ("msr cntvoff_el2, xzr");
+    }
+
     DEBUG ((DEBUG_WARN, "CNTFRQ_EL0 ARM Register is NULL!\n"));
   } else {
     DEBUG ((DEBUG_ERROR, "ARM Architectural Timer is not available in the CPU, hence this library cannot be used.\n"));

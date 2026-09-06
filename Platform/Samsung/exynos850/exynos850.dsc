@@ -25,7 +25,7 @@
 [PcdsFixedAtBuild.common]
   # memory
   gArmTokenSpaceGuid.PcdSystemMemoryBase|0x80000000
-  gArmTokenSpaceGuid.PcdSystemMemorySize|0x180000000
+  gArmTokenSpaceGuid.PcdSystemMemorySize|0xC0000000
 
   gArmTokenSpaceGuid.PcdCpuVectorBaseAddress|0x80C40000
   gEmbeddedTokenSpaceGuid.PcdPrePiStackBase|0x80C00000
@@ -35,6 +35,10 @@
 
   # framebuffer
   gSamsungTokenSpaceGuid.PcdMipiFrameBufferAddress|0xfa000000
+  gSamsungTokenSpaceGuid.PcdMipiFrameBufferWidth|1080
+  gSamsungTokenSpaceGuid.PcdMipiFrameBufferHeight|2408
+  gSamsungTokenSpaceGuid.PcdMipiFrameBufferVisibleWidth|1080
+  gSamsungTokenSpaceGuid.PcdMipiFrameBufferVisibleHeight|2408
 
   # timer
   gArmTokenSpaceGuid.PcdArmArchTimerFreqInHz|27300000
@@ -58,7 +62,7 @@
   # SimpleInit
   #
   gSimpleInitTokenSpaceGuid.PcdDeviceTreeStore|0x80000000
-  gSimpleInitTokenSpaceGuid.PcdLoggerdUseConsole|FALSE
+  gSimpleInitTokenSpaceGuid.PcdLoggerdUseConsole|TRUE
 
 [LibraryClasses.common]
   KeypadDeviceImplLib|Silicon/Samsung/Exynos850Pkg/Library/KeypadDeviceImplLib/KeypadDeviceImplLib.inf

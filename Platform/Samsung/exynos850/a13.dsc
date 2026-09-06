@@ -9,11 +9,12 @@
   SKUID_IDENTIFIER               = DEFAULT
   FLASH_DEFINITION               = Platform/Samsung/exynos850/exynos850.fdf
   DEVICE_DXE_FV_COMPONENTS       = Platform/Samsung/exynos850/exynos850.fdf.inc
+  BROKEN_CNTFRQ_EL0              = 1
 
 !include Platform/Samsung/exynos850/exynos850.dsc
 
 [BuildOptions.common]
-  GCC:*_*_AARCH64_CC_FLAGS = -DENABLE_SIMPLE_INIT
+  GCC:*_*_AARCH64_CC_FLAGS = -DENABLE_SIMPLE_INIT -DBROKEN_CNTFRQ_EL0=$(BROKEN_CNTFRQ_EL0)
 
 [PcdsFixedAtBuild.common]
   gSamsungTokenSpaceGuid.PcdMipiFrameBufferWidth|1080
