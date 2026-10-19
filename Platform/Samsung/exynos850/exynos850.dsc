@@ -88,4 +88,5 @@
   # stores recovery/bootloader reboot requests in PMU SYSIP_DAT0 for S-Boot
   Silicon/Samsung/Exynos850Pkg/Drivers/ExynosResetNotifyDxe/ExynosResetNotifyDxe.inf
   Silicon/Samsung/Exynos850Pkg/Drivers/Exynos850MmcBlockIoDxe/Exynos850MmcBlockIoDxe.inf
+  Silicon/Samsung/Exynos850Pkg/Drivers/Exynos850SdBlockIoDxe/Exynos850SdBlockIoDxe.inf
   Platform/RenegadePkg/Drivers/Ext4Dxe/Ext4Dxe.inf

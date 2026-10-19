@@ -133,6 +133,7 @@ READ_LOCK_STATUS   = TRUE
   INF Silicon/Samsung/ExynosPkg/Drivers/SimpleFbDxe/SimpleFbDxe.inf
   INF Silicon/Samsung/Exynos850Pkg/Drivers/Exynos850MmcBlockIoDxe/Exynos850MmcBlockIoDxe.inf
   INF Silicon/Samsung/Exynos850Pkg/Drivers/ExynosResetNotifyDxe/ExynosResetNotifyDxe.inf
+  INF Silicon/Samsung/Exynos850Pkg/Drivers/Exynos850SdBlockIoDxe/Exynos850SdBlockIoDxe.inf
 
    INF Silicon/Samsung/ExynosPkg/Drivers/KeypadDxe/KeypadDxe.inf
   INF Silicon/Samsung/Exynos850Pkg/Drivers/MmcDiagDxe/MmcDiagDxe.inf
