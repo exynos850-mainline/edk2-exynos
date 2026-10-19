@@ -1,0 +1,30 @@
+#/** @file
+# ResetSystemLib for Exynos850 (S5E3830) / SM-A145F - PMU PS_HOLD + SWRESET,
+# not PSCI (confirmed not implemented by this device's secure monitor for
+# SYSTEM_RESET/SYSTEM_OFF; see ResetSystemLib.c for the full story).
+#
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+#
+#**/
+
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = Exynos850ResetSystemLib
+  FILE_GUID                      = C3A145F0-8500-4E52-9353-52455345540A
+  MODULE_TYPE                    = BASE
+  VERSION_STRING                 = 1.0
+  LIBRARY_CLASS                  = ResetSystemLib
+
+[Sources]
+  ResetSystemLib.c
+
+[Packages]
+  MdeModulePkg/MdeModulePkg.dec
+  MdePkg/MdePkg.dec
+
+[LibraryClasses]
+  BaseLib
+  DebugLib
+  IoLib
+  TimerLib
+  UefiBootServicesTableLib

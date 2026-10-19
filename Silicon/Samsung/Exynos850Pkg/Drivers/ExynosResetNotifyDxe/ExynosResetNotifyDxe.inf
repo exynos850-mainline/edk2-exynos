@@ -1,0 +1,35 @@
+## @file
+#  Stores the requested reboot mode (recovery / bootloader / ...) in
+#  PMU SYSIP_DAT0 so S-Boot acts on it after the reset. Uses the
+#  EFI_RESET_NOTIFICATION_PROTOCOL because ResetCold() in ResetSystemLib does
+#  not receive ResetData.
+#
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+##
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = ExynosResetNotifyDxe
+  FILE_GUID                      = 5b0e7c1a-9d34-4f6e-8a21-a1450850e0f4
+  MODULE_TYPE                    = DXE_DRIVER
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = ExynosResetNotifyEntry
+
+[Sources]
+  ExynosResetNotifyDxe.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+
+[LibraryClasses]
+  UefiDriverEntryPoint
+  BaseMemoryLib
+  UefiBootServicesTableLib
+  BaseLib
+  DebugLib
+  IoLib
+
+[Protocols]
+  gEfiResetNotificationProtocolGuid   ## CONSUMES
+
+[Depex]
+  gEfiResetNotificationProtocolGuid

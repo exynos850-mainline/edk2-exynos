@@ -14,3 +14,5 @@ ramdisk
 *.rej
 *.orig
 *.fd
+__pycache__/
+*.pyc

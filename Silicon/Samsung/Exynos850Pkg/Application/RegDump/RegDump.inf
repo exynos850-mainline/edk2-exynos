@@ -1,0 +1,32 @@
+## @file
+#  RegDump - read-only CHIPID / PMU_ALIVE / TMU / ADC register dump for the
+#  Exynos850 (S5E3830) SM-A145F. Port of the U-Boot "regdump" bootmenu entry.
+#
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+##
+[Defines]
+  INF_VERSION                    = 0x00010019
+  BASE_NAME                      = RegDump
+  FILE_GUID                      = 5e3a7c14-9b2d-4f6a-8d11-a145f0850d01
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = RegDumpMain
+
+[Sources]
+  RegDump.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  Silicon/Samsung/Exynos850Pkg/exynos850.dec
+
+[LibraryClasses]
+  BaseLib
+  BaseMemoryLib
+  IoLib
+  SafeMmioLib
+  UefiApplicationEntryPoint
+  UefiBootServicesTableLib
+  UefiLib
+
+[Protocols]
+  gEfiShellParametersProtocolGuid     ## SOMETIMES_CONSUMES

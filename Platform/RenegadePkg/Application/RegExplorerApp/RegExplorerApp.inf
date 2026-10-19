@@ -1,0 +1,38 @@
+#/** @file
+#
+#  Register/eFuse Explorer - private bring-up tool for the A145F (Exynos 850 /
+#  S5E3830) port. Menu-driven, read-only dump of CHIPID, PMU_ALIVE, TMU, ADC
+#  and the SMC-gated ASV/eFuse calibration table. See the .c file header for
+#  the full writeup and sources this is derived from.
+#
+#  Not for distribution with the public firmware image - this is a developer
+#  tool for understanding the SoC, built for one device's own bring-up.
+#
+#**/
+
+[Defines]
+  INF_VERSION                    = 0x00010019
+  BASE_NAME                      = RegExplorerApp
+  FILE_GUID                      = 5da3cee5-f136-431b-8814-f1b31717036f
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = RegExplorerAppEntryPoint
+
+[Sources.common]
+  RegExplorerApp.c
+
+[LibraryClasses]
+  BaseLib
+  SafeMmioLib
+  UefiLib
+  IoLib
+  ArmSmcLib
+  UefiApplicationEntryPoint
+  UefiBootServicesTableLib
+
+[Packages]
+  ArmPkg/ArmPkg.dec
+  MdePkg/MdePkg.dec
+  Silicon/Samsung/ExynosPkg/ExynosPkg.dec
+  Silicon/Samsung/Exynos850Pkg/exynos850.dec
+  Platform/RenegadePkg/RenegadePkg.dec

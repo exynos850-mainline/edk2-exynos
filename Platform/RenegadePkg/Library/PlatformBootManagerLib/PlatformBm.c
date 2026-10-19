@@ -678,6 +678,17 @@ VOID EFIAPI PlatformBootManagerAfterConsole(VOID)
   PlatformRegisterFvBootOption(
       &gUefiShellFileGuid, L"UEFI Shell", LOAD_OPTION_ACTIVE);
 
+#ifdef REG_EXPLORER_APP_SUPPORT
+  //
+  // Register the private register/eFuse explorer (read-only bring-up tool,
+  // see Platform/RenegadePkg/Application/RegExplorerApp). Only built when
+  // REG_EXPLORER_APP_SUPPORT is defined - leave it out of a firmware image
+  // meant for anyone else.
+  //
+  PlatformRegisterFvBootOption(
+      &gRegExplorerAppFileGuid, L"Register/eFuse Explorer (private)", LOAD_OPTION_ACTIVE);
+#endif
+
 #ifdef ENABLE_LINUX_SIMPLE_MASS_STORAGE
   //
   // Register Built-in Linux Kernel

@@ -283,6 +283,9 @@ done
 [ -n "${_EDK2}" ]||_error "EDK2 not found, please see README.md"
 [ -n "${_EDK2_PLATFORMS}" ]||_error "EDK2 Platforms not found, please see README.md"
 [ -n "${_SIMPLE_INIT}" ]||_error "SimpleInit not found, please see README.md"
+# SimpleInit free(NULL) crash (clang folds the NULL check; FAR=0xFFFFFFFFFFFFFFF0). The submodule is pinned
+# upstream, so re-apply the fix on every build; it is idempotent and keeps CRLF/LF.
+python3 tools/a145f/fix-simpleinit-free.py "${_SIMPLE_INIT}"||_error "could not apply the SimpleInit free() fix"
 [ -f "configs/devices/${DEVICE}.conf" ]||_error "Device configuration not found"
 echo "EDK2 Path: ${_EDK2}"
 echo "EDK2_PLATFORMS Path: ${_EDK2_PLATFORMS}"

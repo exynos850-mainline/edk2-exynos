@@ -11,9 +11,7 @@ This repository aims to provide an usable EDK2 UEFI environment for modern Samsu
 
 It can be used as a boot manager for multi-booting mainline Linux, Android and optionally Windows on certain SoCs.
 
-## User guide and documentations
-
-Please visit [Renegade Project Wiki](https://wiki.renegade-project.cn/)
+## project remade to run fedora and etc
 
 ## Acknowledgements
 - Gustave Monce and his [SurfaceDuoPkg](https://github.com/WOA-Project/SurfaceDuoPkg)

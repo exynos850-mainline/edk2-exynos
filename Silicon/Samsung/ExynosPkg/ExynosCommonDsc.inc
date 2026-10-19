@@ -507,6 +507,7 @@
 
   # Keypad
   Silicon/Samsung/ExynosPkg/Drivers/KeypadDxe/KeypadDxe.inf
+  Silicon/Samsung/Exynos850Pkg/Drivers/MmcDiagDxe/MmcDiagDxe.inf
   Silicon/Samsung/ExynosPkg/Drivers/GenericKeypadDeviceDxe/GenericKeypadDeviceDxe.inf
 
   # ACPI
@@ -537,3 +538,10 @@
 !endif
 
   Platform/RenegadePkg/Application/Reboot2PayloadApp/Reboot2PayloadApp.inf
+
+  # Private, read-only register/eFuse dump menu (see
+  # Platform/RenegadePkg/Application/RegExplorerApp). Only for the device's
+  # own private builds - gated the same way AB_SLOTS_SUPPORT is above.
+!if $(REG_EXPLORER_APP_SUPPORT) == TRUE
+  Platform/RenegadePkg/Application/RegExplorerApp/RegExplorerApp.inf
+!endif

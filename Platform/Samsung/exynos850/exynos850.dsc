@@ -65,9 +65,28 @@
   gSimpleInitTokenSpaceGuid.PcdLoggerdUseConsole|TRUE
 
 [LibraryClasses.common]
+  # ExynosCommonDsc.inc defaults both of these to ArmPkg's
+  # ArmSmcPsciResetSystemLib. On the A145F the secure monitor backs PSCI
+  # CPU_ON/OFF/SUSPEND (needed for SMP bring-up) but not SYSTEM_RESET/
+  # SYSTEM_OFF, so that lib's SMC calls just return and the boot-menu's
+  # Reboot/Power Off entries report "reset system failed". Override with
+  # the PMU PS_HOLD/SWRESET implementation instead - see its ResetSystemLib.c
+  # for how that was confirmed.
+  HwResetSystemLib|Silicon/Samsung/Exynos850Pkg/Library/ResetSystemLib/ResetSystemLib.inf
+  ResetSystemLib|Silicon/Samsung/Exynos850Pkg/Library/ResetSystemLib/ResetSystemLib.inf
+
+  # fault-tolerant register probing (RegDump and other debug apps)
+  SafeMmioLib|Silicon/Samsung/Exynos850Pkg/Library/SafeMmioLib/SafeMmioLib.inf
   KeypadDeviceImplLib|Silicon/Samsung/Exynos850Pkg/Library/KeypadDeviceImplLib/KeypadDeviceImplLib.inf
   PlatformMemoryMapLib|Silicon/Samsung/Exynos850Pkg/Library/PlatformMemoryMapLib/PlatformMemoryMapLib.inf
   PlatformPeiLib|Silicon/Samsung/Exynos850Pkg/Library/PlatformPeiLib/PlatformPeiLib.inf
   PlatformPrePiLib|Silicon/Samsung/Exynos850Pkg/Library/PlatformPrePiLib/PlatformPrePiLib.inf
   MsPlatformDevicesLib|Silicon/Samsung/Exynos850Pkg/Library/MsPlatformDevicesLib/MsPlatformDevicesLib.inf
   SOCSmbiosInfoLib|Silicon/Samsung/Exynos850Pkg/Library/SOCSmbiosInfoLib/SOCSmbiosInfoLib.inf
+
+[Components.common]
+  # stores recovery/bootloader reboot requests in PMU SYSIP_DAT0 for S-Boot
+  Silicon/Samsung/Exynos850Pkg/Drivers/ExynosResetNotifyDxe/ExynosResetNotifyDxe.inf
+  Silicon/Samsung/Exynos850Pkg/Drivers/Exynos850MmcBlockIoDxe/Exynos850MmcBlockIoDxe.inf
+  Silicon/Samsung/Exynos850Pkg/Drivers/Exynos850SdBlockIoDxe/Exynos850SdBlockIoDxe.inf
+  Platform/RenegadePkg/Drivers/Ext4Dxe/Ext4Dxe.inf

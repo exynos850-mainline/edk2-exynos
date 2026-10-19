@@ -131,9 +131,13 @@ READ_LOCK_STATUS   = TRUE
 !include Platform/Samsung/exynos850/dxe.fdf.inc
 
   INF Silicon/Samsung/ExynosPkg/Drivers/SimpleFbDxe/SimpleFbDxe.inf
+  INF Silicon/Samsung/Exynos850Pkg/Drivers/Exynos850MmcBlockIoDxe/Exynos850MmcBlockIoDxe.inf
+  INF Silicon/Samsung/Exynos850Pkg/Drivers/ExynosResetNotifyDxe/ExynosResetNotifyDxe.inf
+  INF Silicon/Samsung/Exynos850Pkg/Drivers/Exynos850SdBlockIoDxe/Exynos850SdBlockIoDxe.inf
 
-  INF Silicon/Samsung/ExynosPkg/Drivers/KeypadDxe/KeypadDxe.inf
-  INF Silicon/Samsung/ExynosPkg/Drivers/GenericKeypadDeviceDxe/GenericKeypadDeviceDxe.inf
+   INF Silicon/Samsung/ExynosPkg/Drivers/KeypadDxe/KeypadDxe.inf
+  INF Silicon/Samsung/Exynos850Pkg/Drivers/MmcDiagDxe/MmcDiagDxe.inf
+   INF Silicon/Samsung/ExynosPkg/Drivers/GenericKeypadDeviceDxe/GenericKeypadDeviceDxe.inf
 
   #
   # USB Host Support
@@ -148,6 +152,7 @@ READ_LOCK_STATUS   = TRUE
   INF MdeModulePkg/Universal/Disk/DiskIoDxe/DiskIoDxe.inf
   INF MdeModulePkg/Universal/Disk/PartitionDxe/PartitionDxe.inf
   INF FatPkg/EnhancedFatDxe/Fat.inf
+  INF Platform/RenegadePkg/Drivers/Ext4Dxe/Ext4Dxe.inf
   INF MdeModulePkg/Universal/Disk/UnicodeCollation/EnglishDxe/EnglishDxe.inf
   INF MdeModulePkg/Universal/FvSimpleFileSystemDxe/FvSimpleFileSystemDxe.inf
   INF MdeModulePkg/Universal/Variable/RuntimeDxe/VariableRuntimeDxe.inf

@@ -1,0 +1,44 @@
+## @file
+#  Robust AArch64 DefaultExceptionHandlerLib for Exynos850 (SM-A145F).
+#
+#  Replacement for ArmPkg/Library/DefaultExceptionHandlerLib. Differences:
+#   - the important registers (ELR/ESR/FAR/SP/LR/FP, X0-X30) are printed first,
+#   - every frame pointer is validated against the platform memory map before
+#     it is dereferenced,
+#   - every risky stage runs under SetJump/LongJump, so a fault inside the
+#     handler is reported (with its own ELR/FAR/ESR) and the dump carries on,
+#   - the 32 vector registers are not dumped (they scroll the useful lines off
+#     the framebuffer console).
+#
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+##
+
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = DefaultExceptionHandlerLibSafe
+  FILE_GUID                      = 5b0e7c1a-9d34-4f6e-8a21-a1450850e0c1
+  MODULE_TYPE                    = BASE
+  VERSION_STRING                 = 1.0
+  LIBRARY_CLASS                  = DefaultExceptionHandlerLib|DXE_CORE DXE_DRIVER
+
+[Sources.AARCH64]
+  SafeExceptionHandler.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  ArmPkg/ArmPkg.dec
+  EmbeddedPkg/EmbeddedPkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+  Silicon/Samsung/ExynosPkg/ExynosPkg.dec
+
+[LibraryClasses]
+  BaseLib
+  DebugLib
+  PrintLib
+  SerialPortLib
+  UefiLib
+  PeCoffGetEntryPointLib
+  PlatformMemoryMapLib
+
+[Guids]
+  gEfiDebugImageInfoTableGuid

@@ -1,0 +1,26 @@
+## @file
+#  SafeMmioLib - MMIO reads that survive a synchronous external abort.
+#
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+##
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = SafeMmioLib
+  FILE_GUID                      = 5b0e7c1a-9d34-4f6e-8a21-a1450850e0d2
+  MODULE_TYPE                    = UEFI_DRIVER
+  VERSION_STRING                 = 1.0
+  LIBRARY_CLASS                  = SafeMmioLib|UEFI_APPLICATION UEFI_DRIVER DXE_DRIVER
+  DESTRUCTOR                     = SafeMmioLibDestructor
+
+[Sources.AARCH64]
+  SafeMmioLib.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  Silicon/Samsung/Exynos850Pkg/exynos850.dec
+
+[LibraryClasses]
+  UefiBootServicesTableLib
+
+[Protocols]
+  gEfiCpuArchProtocolGuid     ## CONSUMES

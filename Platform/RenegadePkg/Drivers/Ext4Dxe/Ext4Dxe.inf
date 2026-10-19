@@ -1,0 +1,46 @@
+## @file
+#  Read-only ext4 EFI_SIMPLE_FILE_SYSTEM_PROTOCOL driver.
+#
+#  Binds onto any EFI_BLOCK_IO_PROTOCOL/EFI_DISK_IO_PROTOCOL handle (i.e.
+#  any PartitionDxe-exposed partition, including ones on the a145f eMMC
+#  Block I/O driver) whose superblock magic says ext4. See Ext4Dxe.c for
+#  why this exists and Ext4Disk.c for what it does and does not support.
+#
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+##
+
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = Ext4Dxe
+  FILE_GUID                      = E6D40B1F-A145-4500-8500-45583434444A
+  MODULE_TYPE                    = UEFI_DRIVER
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = Ext4DriverEntryPoint
+
+[Sources]
+  Ext4Dxe.h
+  Ext4Dxe.c
+  Ext4Disk.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+
+[LibraryClasses]
+  BaseLib
+  BaseMemoryLib
+  DebugLib
+  MemoryAllocationLib
+  UefiBootServicesTableLib
+  UefiDriverEntryPoint
+  UefiLib
+
+[Protocols]
+  gEfiDiskIoProtocolGuid              ## TO_START
+  gEfiBlockIoProtocolGuid             ## TO_START
+  gEfiSimpleFileSystemProtocolGuid    ## BY_START
+
+[Guids]
+  gEfiFileInfoGuid
+  gEfiFileSystemInfoGuid
+  gEfiFileSystemVolumeLabelInfoIdGuid

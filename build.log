@@ -1,0 +1,1206 @@
+SimpleInit free(): already fixed
+EDK2 Path: /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2
+EDK2_PLATFORMS Path: /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2-platforms
+Loading previous configuration from /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/Conf/BuildEnv.sh
+Using EDK2 in-source Basetools
+WORKSPACE: /home/gunbileg/Downloads/edk2-exynos850-a145f/workspace
+EDK_TOOLS_PATH: /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools
+CONF_PATH: /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/Conf
++ make -C /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools
+make: Entering directory '/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools'
+make -C Source/C
+make[1]: Entering directory '/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/C'
+Attempting to detect HOST_ARCH from 'uname -m': x86_64
+Detected HOST_ARCH of X64 using uname.
+mkdir -p .
+make -C Common
+make[2]: Entering directory '/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/C/Common'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/C/Common'
+make -C BrotliCompress
+make[2]: Entering directory '/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/C/BrotliCompress'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/C/BrotliCompress'
+make -C VfrCompile
+make[2]: Entering directory '/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/C/VfrCompile'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/C/VfrCompile'
+make -C EfiRom
+make[2]: Entering directory '/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/C/EfiRom'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/C/EfiRom'
+make -C GenFfs
+make[2]: Entering directory '/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/C/GenFfs'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/C/GenFfs'
+make -C GenFv
+make[2]: Entering directory '/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/C/GenFv'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/C/GenFv'
+make -C GenFw
+make[2]: Entering directory '/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/C/GenFw'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/C/GenFw'
+make -C GenSec
+make[2]: Entering directory '/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/C/GenSec'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/C/GenSec'
+make -C GenCrc32
+make[2]: Entering directory '/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/C/GenCrc32'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/C/GenCrc32'
+make -C LzmaCompress
+make[2]: Entering directory '/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/C/LzmaCompress'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/C/LzmaCompress'
+make -C TianoCompress
+make[2]: Entering directory '/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/C/TianoCompress'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/C/TianoCompress'
+make -C VolInfo
+make[2]: Entering directory '/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/C/VolInfo'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/C/VolInfo'
+make -C DevicePath
+make[2]: Entering directory '/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/C/DevicePath'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/C/DevicePath'
+Finished building BaseTools C Tools with HOST_ARCH=X64
+make[1]: Leaving directory '/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/C'
+make -C Source/Python
+make[1]: Entering directory '/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python'
+make -C Tests
+make[1]: Entering directory '/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Tests'
+testHelp (TianoCompress.Tests.testHelp) ... ok
+testRandomDataCycles (TianoCompress.Tests.testRandomDataCycles) ... ok
+test_AmlToC_AmlToC (CheckPythonSyntax.Tests.test_AmlToC_AmlToC) ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/AmlToC/AmlToC.py:22: SyntaxWarning: "\D" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\D"? A raw string is also an option.
+  array. By default, Tables\Dsdt.aml will generate Tables\Dsdt.c.
+ok
+test_AutoGen_AutoGen (CheckPythonSyntax.Tests.test_AutoGen_AutoGen) ... ok
+test_AutoGen_AutoGenWorker (CheckPythonSyntax.Tests.test_AutoGen_AutoGenWorker) ... ok
+test_AutoGen_BuildEngine (CheckPythonSyntax.Tests.test_AutoGen_BuildEngine) ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/AutoGen/BuildEngine.py:309: SyntaxWarning: "\-" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\-"? A raw string is also an option.
+  _FileTypePattern = re.compile("^[_a-zA-Z][_\-0-9a-zA-Z]*$")
+ok
+test_AutoGen_DataPipe (CheckPythonSyntax.Tests.test_AutoGen_DataPipe) ... ok
+test_AutoGen_GenC (CheckPythonSyntax.Tests.test_AutoGen_GenC) ... ok
+test_AutoGen_GenDepex (CheckPythonSyntax.Tests.test_AutoGen_GenDepex) ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/AutoGen/GenDepex.py:129: SyntaxWarning: "\(" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\("? A raw string is also an option.
+  TokenPattern = re.compile("(\(|\)|\{[^{}]+\{?[^{}]+\}?[ ]*\}|\w+)")
+ok
+test_AutoGen_GenMake (CheckPythonSyntax.Tests.test_AutoGen_GenMake) ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/AutoGen/GenMake.py:31: SyntaxWarning: "\(" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\("? A raw string is also an option.
+  gMacroPattern = re.compile("([_A-Z][_A-Z0-9]*)[ \t]*\((.+)\)", re.UNICODE)
+ok
+test_AutoGen_GenPcdDb (CheckPythonSyntax.Tests.test_AutoGen_GenPcdDb) ... ok
+test_AutoGen_GenVar (CheckPythonSyntax.Tests.test_AutoGen_GenVar) ... ok
+test_AutoGen_IdfClassObject (CheckPythonSyntax.Tests.test_AutoGen_IdfClassObject) ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/AutoGen/IdfClassObject.py:21: SyntaxWarning: "\(" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\("? A raw string is also an option.
+  IMAGE_TOKEN = re.compile('IMAGE_TOKEN *\(([A-Z0-9_]+) *\)', re.MULTILINE | re.UNICODE)
+ok
+test_AutoGen_IncludesAutoGen (CheckPythonSyntax.Tests.test_AutoGen_IncludesAutoGen) ... ok
+test_AutoGen_InfSectionParser (CheckPythonSyntax.Tests.test_AutoGen_InfSectionParser) ... ok
+test_AutoGen_ModuleAutoGen (CheckPythonSyntax.Tests.test_AutoGen_ModuleAutoGen) ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/AutoGen/ModuleAutoGen.py:54: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  gEfiVarStoreNamePattern = re.compile("\s*name\s*=\s*(\w+)")
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/AutoGen/ModuleAutoGen.py:59: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  gEfiVarStoreGuidPattern = re.compile("\s*guid\s*=\s*({.*?{.*?}\s*})")
+ok
+test_AutoGen_ModuleAutoGenHelper (CheckPythonSyntax.Tests.test_AutoGen_ModuleAutoGenHelper) ... ok
+test_AutoGen_PlatformAutoGen (CheckPythonSyntax.Tests.test_AutoGen_PlatformAutoGen) ... ok
+test_AutoGen_StrGather (CheckPythonSyntax.Tests.test_AutoGen_StrGather) ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/AutoGen/StrGather.py:57: SyntaxWarning: "\(" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\("? A raw string is also an option.
+  STRING_TOKEN = re.compile('STRING_TOKEN *\(([A-Z0-9_]+) *\)', re.MULTILINE | re.UNICODE)
+ok
+test_AutoGen_UniClassObject (CheckPythonSyntax.Tests.test_AutoGen_UniClassObject) ... ok
+test_AutoGen_ValidCheckingInfoObject (CheckPythonSyntax.Tests.test_AutoGen_ValidCheckingInfoObject) ... ok
+test_AutoGen_WorkspaceAutoGen (CheckPythonSyntax.Tests.test_AutoGen_WorkspaceAutoGen) ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/AutoGen/WorkspaceAutoGen.py:29: SyntaxWarning: "\(" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\("? A raw string is also an option.
+  gDepexTokenPattern = re.compile("(\(|\)|\w+| \S+\.inf)")
+ok
+test_AutoGen___init__ (CheckPythonSyntax.Tests.test_AutoGen___init__) ... ok
+test_BPDG_BPDG (CheckPythonSyntax.Tests.test_BPDG_BPDG) ... ok
+test_BPDG_GenVpd (CheckPythonSyntax.Tests.test_BPDG_GenVpd) ... ok
+test_BPDG_StringTable (CheckPythonSyntax.Tests.test_BPDG_StringTable) ... ok
+test_BPDG___init__ (CheckPythonSyntax.Tests.test_BPDG___init__) ... ok
+test_Capsule_GenerateCapsule (CheckPythonSyntax.Tests.test_Capsule_GenerateCapsule) ... ok
+test_Capsule_GenerateWindowsDriver (CheckPythonSyntax.Tests.test_Capsule_GenerateWindowsDriver) ... ok
+test_Capsule_WindowsCapsuleSupportHelper (CheckPythonSyntax.Tests.test_Capsule_WindowsCapsuleSupportHelper) ... ok
+test_CommonDataClass_CommonClass (CheckPythonSyntax.Tests.test_CommonDataClass_CommonClass) ... ok
+test_CommonDataClass_DataClass (CheckPythonSyntax.Tests.test_CommonDataClass_DataClass) ... ok
+test_CommonDataClass_Exceptions (CheckPythonSyntax.Tests.test_CommonDataClass_Exceptions) ... ok
+test_CommonDataClass_FdfClass (CheckPythonSyntax.Tests.test_CommonDataClass_FdfClass) ... ok
+test_CommonDataClass___init__ (CheckPythonSyntax.Tests.test_CommonDataClass___init__) ... ok
+test_Common_BuildToolError (CheckPythonSyntax.Tests.test_Common_BuildToolError) ... ok
+test_Common_BuildVersion (CheckPythonSyntax.Tests.test_Common_BuildVersion) ... ok
+test_Common_DataType (CheckPythonSyntax.Tests.test_Common_DataType) ... ok
+test_Common_Edk2_Capsule_FmpPayloadHeader (CheckPythonSyntax.Tests.test_Common_Edk2_Capsule_FmpPayloadHeader) ... ok
+test_Common_Edk2_Capsule___init__ (CheckPythonSyntax.Tests.test_Common_Edk2_Capsule___init__) ... ok
+test_Common_Edk2___init__ (CheckPythonSyntax.Tests.test_Common_Edk2___init__) ... ok
+test_Common_EdkLogger (CheckPythonSyntax.Tests.test_Common_EdkLogger) ... ok
+test_Common_Expression (CheckPythonSyntax.Tests.test_Common_Expression) ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Common/Expression.py:44: SyntaxWarning: "\(" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\("? A raw string is also an option.
+  _ReLabel = re.compile('LABEL\((\w+)\)')
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Common/Expression.py:45: SyntaxWarning: "\(" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\("? A raw string is also an option.
+  _ReOffset = re.compile('OFFSET_OF\((\w+)\)')
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Common/Expression.py:245: SyntaxWarning: "\$" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\$"? A raw string is also an option.
+  "\$\([A-Z][A-Z0-9_]*\)|\$\(\w+\.\w+\)|\w+\.\w+|"
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Common/Expression.py:246: SyntaxWarning: "\|" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\|"? A raw string is also an option.
+  "&&|\|\||!(?!=)|"
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Common/Expression.py:247: SyntaxWarning: "\W" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\W"? A raw string is also an option.
+  "(?<=\W)AND(?=\W)|(?<=\W)OR(?=\W)|(?<=\W)NOT(?=\W)|(?<=\W)XOR(?=\W)|"
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Common/Expression.py:248: SyntaxWarning: "\W" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\W"? A raw string is also an option.
+  "(?<=\W)EQ(?=\W)|(?<=\W)NE(?=\W)|(?<=\W)GT(?=\W)|(?<=\W)LT(?=\W)|(?<=\W)GE(?=\W)|(?<=\W)LE(?=\W)"
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Common/Expression.py:740: SyntaxWarning: "\(" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\("? A raw string is also an option.
+  Re = re.compile('(?:UINT8|UINT16|UINT32|UINT64)\((.+)\)')
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Common/Expression.py:978: SyntaxWarning: "\(" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\("? A raw string is also an option.
+  TokenSpaceGuidName = re.search('GUID\((\w+)\)', Item).group(1)
+ok
+test_Common_GlobalData (CheckPythonSyntax.Tests.test_Common_GlobalData) ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Common/GlobalData.py:39: SyntaxWarning: "\$" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\$"? A raw string is also an option.
+  gMacroRefPattern = re.compile("\$\(({})\)".format(_MacroNamePattern), re.UNICODE)
+ok
+test_Common_LongFilePathOs (CheckPythonSyntax.Tests.test_Common_LongFilePathOs) ... ok
+test_Common_LongFilePathOsPath (CheckPythonSyntax.Tests.test_Common_LongFilePathOsPath) ... ok
+test_Common_LongFilePathSupport (CheckPythonSyntax.Tests.test_Common_LongFilePathSupport) ... ok
+test_Common_Misc (CheckPythonSyntax.Tests.test_Common_Misc) ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Common/Misc.py:44: SyntaxWarning: "\[" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\["? A raw string is also an option.
+  ArrayIndex = re.compile("\[\s*[0-9a-fA-FxX]*\s*\]")
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Common/Misc.py:46: SyntaxWarning: "\$" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\$"? A raw string is also an option.
+  gPlaceholderPattern = re.compile("\$\{([^$()\s]+)\}", re.MULTILINE | re.UNICODE)
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Common/Misc.py:50: SyntaxWarning: "\+" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\+"? A raw string is also an option.
+  addressPatternGeneral = re.compile("^Address[' ']+Publics by Value[' ']+Rva\+Base")
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Common/Misc.py:51: SyntaxWarning: "\w" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\w"? A raw string is also an option.
+  valuePatternGcc = re.compile('^([\w_\.]+) +([\da-fA-Fx]+) +([\da-fA-Fx]+)$')
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Common/Misc.py:52: SyntaxWarning: "\d" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\d"? A raw string is also an option.
+  pcdPatternGcc = re.compile('^([\da-fA-Fx]+) +([\da-fA-Fx]+)')
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Common/Misc.py:53: SyntaxWarning: "\d" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\d"? A raw string is also an option.
+  secReGeneral = re.compile('^([\da-fA-F]+):([\da-fA-F]+) +([\da-fA-F]+)[Hh]? +([.\w\$]+) +(\w+)', re.UNICODE)
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Common/Misc.py:85: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  if re.match('^\s*Address\s*Size\s*Align\s*Out\s*In\s*Symbol\s*$', firstline):
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Common/Misc.py:99: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  if status == 0 and (re.match('^\s*Address\s*Size\s*Align\s*Out\s*In\s*Symbol\s*$', line) \
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Common/Misc.py:107: SyntaxWarning: "\d" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\d"? A raw string is also an option.
+  m = re.match('^([\da-fA-FxX]+)([\s\S]*)([_]*%s)$' % varname, line)
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Common/Misc.py:173: SyntaxWarning: "\d" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\d"? A raw string is also an option.
+  symRe = re.compile('^([\da-fA-F]+):([\da-fA-F]+) +([\.:\\\\\w\?@\$-]+) +([\da-fA-F]+)', re.UNICODE)
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Common/Misc.py:1929: SyntaxWarning: "\*" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\*"? A raw string is also an option.
+  return re.sub('//.*?\n|/\*.*?\*/', '\n', ctext, flags=re.S)
+ok
+test_Common_MultipleWorkspace (CheckPythonSyntax.Tests.test_Common_MultipleWorkspace) ... ok
+test_Common_Parsing (CheckPythonSyntax.Tests.test_Common_Parsing) ... ok
+test_Common_RangeExpression (CheckPythonSyntax.Tests.test_Common_RangeExpression) ... ok
+test_Common_StringUtils (CheckPythonSyntax.Tests.test_Common_StringUtils) ... ok
+test_Common_TargetTxtClassObject (CheckPythonSyntax.Tests.test_Common_TargetTxtClassObject) ... ok
+test_Common_ToolDefClassObject (CheckPythonSyntax.Tests.test_Common_ToolDefClassObject) ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Common/ToolDefClassObject.py:33: SyntaxWarning: "\(" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\("? A raw string is also an option.
+  gMacroRefPattern = re.compile('(DEF\([^\(\)]+\))')
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Common/ToolDefClassObject.py:34: SyntaxWarning: "\(" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\("? A raw string is also an option.
+  gEnvRefPattern = re.compile('(ENV\([^\(\)]+\))')
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Common/ToolDefClassObject.py:35: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  gMacroDefPattern = re.compile("DEFINE\s+([^\s]+)")
+ok
+test_Common_Uefi_Capsule_CapsuleDependency (CheckPythonSyntax.Tests.test_Common_Uefi_Capsule_CapsuleDependency) ... ok
+test_Common_Uefi_Capsule_FmpAuthHeader (CheckPythonSyntax.Tests.test_Common_Uefi_Capsule_FmpAuthHeader) ... ok
+test_Common_Uefi_Capsule_FmpCapsuleHeader (CheckPythonSyntax.Tests.test_Common_Uefi_Capsule_FmpCapsuleHeader) ... ok
+test_Common_Uefi_Capsule_UefiCapsuleHeader (CheckPythonSyntax.Tests.test_Common_Uefi_Capsule_UefiCapsuleHeader) ... ok
+test_Common_Uefi_Capsule___init__ (CheckPythonSyntax.Tests.test_Common_Uefi_Capsule___init__) ... ok
+test_Common_Uefi___init__ (CheckPythonSyntax.Tests.test_Common_Uefi___init__) ... ok
+test_Common_VariableAttributes (CheckPythonSyntax.Tests.test_Common_VariableAttributes) ... ok
+test_Common_VpdInfoFile (CheckPythonSyntax.Tests.test_Common_VpdInfoFile) ... ok
+test_Common___init__ (CheckPythonSyntax.Tests.test_Common___init__) ... ok
+test_Common_caching (CheckPythonSyntax.Tests.test_Common_caching) ... ok
+test_Ecc_CParser3_CLexer (CheckPythonSyntax.Tests.test_Ecc_CParser3_CLexer) ... ok
+test_Ecc_CParser3_CParser (CheckPythonSyntax.Tests.test_Ecc_CParser3_CParser) ... ok
+test_Ecc_CParser3___init__ (CheckPythonSyntax.Tests.test_Ecc_CParser3___init__) ... ok
+test_Ecc_CParser4_CLexer (CheckPythonSyntax.Tests.test_Ecc_CParser4_CLexer) ... ok
+test_Ecc_CParser4_CListener (CheckPythonSyntax.Tests.test_Ecc_CParser4_CListener) ... ok
+test_Ecc_CParser4_CParser (CheckPythonSyntax.Tests.test_Ecc_CParser4_CParser) ... ok
+test_Ecc_CParser4___init__ (CheckPythonSyntax.Tests.test_Ecc_CParser4___init__) ... ok
+test_Ecc_Check (CheckPythonSyntax.Tests.test_Ecc_Check) ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Ecc/Check.py:1115: SyntaxWarning: "\X" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\X"? A raw string is also an option.
+  Path = Path.upper().replace('\X64', '').replace('\IA32', '').replace('\EBC', '').replace('\IPF', '').replace('\ARM', '')
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Ecc/Check.py:1115: SyntaxWarning: "\I" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\I"? A raw string is also an option.
+  Path = Path.upper().replace('\X64', '').replace('\IA32', '').replace('\EBC', '').replace('\IPF', '').replace('\ARM', '')
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Ecc/Check.py:1115: SyntaxWarning: "\E" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\E"? A raw string is also an option.
+  Path = Path.upper().replace('\X64', '').replace('\IA32', '').replace('\EBC', '').replace('\IPF', '').replace('\ARM', '')
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Ecc/Check.py:1115: SyntaxWarning: "\I" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\I"? A raw string is also an option.
+  Path = Path.upper().replace('\X64', '').replace('\IA32', '').replace('\EBC', '').replace('\IPF', '').replace('\ARM', '')
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Ecc/Check.py:1115: SyntaxWarning: "\A" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\A"? A raw string is also an option.
+  Path = Path.upper().replace('\X64', '').replace('\IA32', '').replace('\EBC', '').replace('\IPF', '').replace('\ARM', '')
+ok
+test_Ecc_CodeFragment (CheckPythonSyntax.Tests.test_Ecc_CodeFragment) ... ok
+test_Ecc_CodeFragmentCollector (CheckPythonSyntax.Tests.test_Ecc_CodeFragmentCollector) ... ok
+test_Ecc_Configuration (CheckPythonSyntax.Tests.test_Ecc_Configuration) ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Ecc/Configuration.py:438: SyntaxWarning: "\S" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\S"? A raw string is also an option.
+  myconfig = Configuration("BaseTools\Source\Python\Ecc\config.ini")
+ok
+test_Ecc_Database (CheckPythonSyntax.Tests.test_Ecc_Database) ... ok
+test_Ecc_EccGlobalData (CheckPythonSyntax.Tests.test_Ecc_EccGlobalData) ... ok
+test_Ecc_EccMain (CheckPythonSyntax.Tests.test_Ecc_EccMain) ... ok
+test_Ecc_EccToolError (CheckPythonSyntax.Tests.test_Ecc_EccToolError) ... ok
+test_Ecc_Exception (CheckPythonSyntax.Tests.test_Ecc_Exception) ... ok
+test_Ecc_FileProfile (CheckPythonSyntax.Tests.test_Ecc_FileProfile) ... ok
+test_Ecc_MetaDataParser (CheckPythonSyntax.Tests.test_Ecc_MetaDataParser) ... ok
+test_Ecc_MetaFileWorkspace_MetaDataTable (CheckPythonSyntax.Tests.test_Ecc_MetaFileWorkspace_MetaDataTable) ... ok
+test_Ecc_MetaFileWorkspace_MetaFileParser (CheckPythonSyntax.Tests.test_Ecc_MetaFileWorkspace_MetaFileParser) ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Ecc/MetaFileWorkspace/MetaFileParser.py:1844: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  PatternDesc = re.compile('##\s*([\x21-\x7E\s]*)', re.S)
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Ecc/MetaFileWorkspace/MetaFileParser.py:1845: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  PatternPrompt = re.compile('#\s+@Prompt\s+([\x21-\x7E\s]*)', re.S)
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Ecc/MetaFileWorkspace/MetaFileParser.py:1850: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  PatternValidRangeIn = '(NOT)?\s*(\d+\s*-\s*\d+|0[xX][a-fA-F0-9]+\s*-\s*0[xX][a-fA-F0-9]+|LT\s*\d+|LT\s*0[xX][a-fA-F0-9]+|GT\s*\d+|GT\s*0[xX][a-fA-F0-9]+|LE\s*\d+|LE\s*0[xX][a-fA-F0-9]+|GE\s*\d+|GE\s*0[xX][a-fA-F0-9]+|XOR\s*\d+|XOR\s*0[xX][a-fA-F0-9]+|EQ\s*\d+|EQ\s*0[xX][a-fA-F0-9]+)'
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Ecc/MetaFileWorkspace/MetaFileParser.py:1851: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  PatternValidRng = re.compile('^' + '(NOT)?\s*' + PatternValidRangeIn + '$')
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Ecc/MetaFileWorkspace/MetaFileParser.py:2074: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  KeyPattern = re.compile('#string\s+%s\s+.*?#language.*?".*?"' % Key, re.S)
+ok
+test_Ecc_MetaFileWorkspace_MetaFileTable (CheckPythonSyntax.Tests.test_Ecc_MetaFileWorkspace_MetaFileTable) ... ok
+test_Ecc_MetaFileWorkspace___init__ (CheckPythonSyntax.Tests.test_Ecc_MetaFileWorkspace___init__) ... ok
+test_Ecc_ParserWarning (CheckPythonSyntax.Tests.test_Ecc_ParserWarning) ... ok
+test_Ecc_Xml_XmlRoutines (CheckPythonSyntax.Tests.test_Ecc_Xml_XmlRoutines) ... ok
+test_Ecc_Xml___init__ (CheckPythonSyntax.Tests.test_Ecc_Xml___init__) ... ok
+test_Ecc___init__ (CheckPythonSyntax.Tests.test_Ecc___init__) ... ok
+test_Ecc_c (CheckPythonSyntax.Tests.test_Ecc_c) ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Ecc/c.py:46: SyntaxWarning: "\w" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\w"? A raw string is also an option.
+  p = re.compile('[_\w\s]*\([\w\s]*\*+\s*[_\w]+\s*\)\s*\(.*\)', re.DOTALL)
+ok
+test_Eot_CParser3_CLexer (CheckPythonSyntax.Tests.test_Eot_CParser3_CLexer) ... ok
+test_Eot_CParser3_CParser (CheckPythonSyntax.Tests.test_Eot_CParser3_CParser) ... ok
+test_Eot_CParser3___init__ (CheckPythonSyntax.Tests.test_Eot_CParser3___init__) ... ok
+test_Eot_CParser4_CLexer (CheckPythonSyntax.Tests.test_Eot_CParser4_CLexer) ... ok
+test_Eot_CParser4_CListener (CheckPythonSyntax.Tests.test_Eot_CParser4_CListener) ... ok
+test_Eot_CParser4_CParser (CheckPythonSyntax.Tests.test_Eot_CParser4_CParser) ... ok
+test_Eot_CParser4___init__ (CheckPythonSyntax.Tests.test_Eot_CParser4___init__) ... ok
+test_Eot_CodeFragment (CheckPythonSyntax.Tests.test_Eot_CodeFragment) ... ok
+test_Eot_CodeFragmentCollector (CheckPythonSyntax.Tests.test_Eot_CodeFragmentCollector) ... ok
+test_Eot_Database (CheckPythonSyntax.Tests.test_Eot_Database) ... ok
+test_Eot_EotGlobalData (CheckPythonSyntax.Tests.test_Eot_EotGlobalData) ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Eot/EotGlobalData.py:14: SyntaxWarning: "\S" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\S"? A raw string is also an option.
+  gSHELL_INF = 'Application\Shell'
+ok
+test_Eot_EotMain (CheckPythonSyntax.Tests.test_Eot_EotMain) ... ok
+test_Eot_EotToolError (CheckPythonSyntax.Tests.test_Eot_EotToolError) ... ok
+test_Eot_FileProfile (CheckPythonSyntax.Tests.test_Eot_FileProfile) ... ok
+test_Eot_Identification (CheckPythonSyntax.Tests.test_Eot_Identification) ... ok
+test_Eot_InfParserLite (CheckPythonSyntax.Tests.test_Eot_InfParserLite) ... ok
+test_Eot_Parser (CheckPythonSyntax.Tests.test_Eot_Parser) ... ok
+test_Eot_ParserWarning (CheckPythonSyntax.Tests.test_Eot_ParserWarning) ... ok
+test_Eot_Report (CheckPythonSyntax.Tests.test_Eot_Report) ... ok
+test_Eot___init__ (CheckPythonSyntax.Tests.test_Eot___init__) ... ok
+test_Eot_c (CheckPythonSyntax.Tests.test_Eot_c) ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Eot/c.py:57: SyntaxWarning: "\w" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\w"? A raw string is also an option.
+  p = re.compile('[_\w\s]*\([\w\s]*\*+\s*[_\w]+\s*\)\s*\(.*\)', re.DOTALL)
+ok
+test_FMMT_FMMT (CheckPythonSyntax.Tests.test_FMMT_FMMT) ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/FMMT/FMMT.py:40: SyntaxWarning: "\C" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\C"? A raw string is also an option.
+  help="Provide the target FmmtConf.ini file path: '-c C:\Code\FmmtConf.ini' \
+ok
+test_FMMT___init__ (CheckPythonSyntax.Tests.test_FMMT___init__) ... ok
+test_FMMT_core_BinaryFactoryProduct (CheckPythonSyntax.Tests.test_FMMT_core_BinaryFactoryProduct) ... ok
+test_FMMT_core_BiosTree (CheckPythonSyntax.Tests.test_FMMT_core_BiosTree) ... ok
+test_FMMT_core_BiosTreeNode (CheckPythonSyntax.Tests.test_FMMT_core_BiosTreeNode) ... ok
+test_FMMT_core_FMMTOperation (CheckPythonSyntax.Tests.test_FMMT_core_FMMTOperation) ... ok
+test_FMMT_core_FMMTParser (CheckPythonSyntax.Tests.test_FMMT_core_FMMTParser) ... ok
+test_FMMT_core_FvHandler (CheckPythonSyntax.Tests.test_FMMT_core_FvHandler) ... ok
+test_FMMT_core_GuidTools (CheckPythonSyntax.Tests.test_FMMT_core_GuidTools) ... ok
+test_FMMT_utils_FmmtLogger (CheckPythonSyntax.Tests.test_FMMT_utils_FmmtLogger) ... ok
+test_FMMT_utils_FvLayoutPrint (CheckPythonSyntax.Tests.test_FMMT_utils_FvLayoutPrint) ... ok
+test_FirmwareStorageFormat_Common (CheckPythonSyntax.Tests.test_FirmwareStorageFormat_Common) ... ok
+test_FirmwareStorageFormat_FfsFileHeader (CheckPythonSyntax.Tests.test_FirmwareStorageFormat_FfsFileHeader) ... ok
+test_FirmwareStorageFormat_FvHeader (CheckPythonSyntax.Tests.test_FirmwareStorageFormat_FvHeader) ... ok
+test_FirmwareStorageFormat_SectionHeader (CheckPythonSyntax.Tests.test_FirmwareStorageFormat_SectionHeader) ... ok
+test_FirmwareStorageFormat___init__ (CheckPythonSyntax.Tests.test_FirmwareStorageFormat___init__) ... ok
+test_GenFds_AprioriSection (CheckPythonSyntax.Tests.test_GenFds_AprioriSection) ... ok
+test_GenFds_Capsule (CheckPythonSyntax.Tests.test_GenFds_Capsule) ... ok
+test_GenFds_CapsuleData (CheckPythonSyntax.Tests.test_GenFds_CapsuleData) ... ok
+test_GenFds_CompressSection (CheckPythonSyntax.Tests.test_GenFds_CompressSection) ... ok
+test_GenFds_DataSection (CheckPythonSyntax.Tests.test_GenFds_DataSection) ... ok
+test_GenFds_DepexSection (CheckPythonSyntax.Tests.test_GenFds_DepexSection) ... ok
+test_GenFds_EfiSection (CheckPythonSyntax.Tests.test_GenFds_EfiSection) ... ok
+test_GenFds_Fd (CheckPythonSyntax.Tests.test_GenFds_Fd) ... ok
+test_GenFds_FdfParser (CheckPythonSyntax.Tests.test_GenFds_FdfParser) ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/GenFds/FdfParser.py:68: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  RegionSizePattern = compile("\s*(?P<base>(?:0x|0X)?[a-fA-F0-9]+)\s*\|\s*(?P<size>(?:0x|0X)?[a-fA-F0-9]+)\s*")
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/GenFds/FdfParser.py:69: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  RegionSizeGuidPattern = compile("\s*(?P<base>\w+\.\w+[\.\w\[\]]*)\s*\|\s*(?P<size>\w+\.\w+[\.\w\[\]]*)\s*")
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/GenFds/FdfParser.py:70: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  RegionOffsetPcdPattern = compile("\s*(?P<base>\w+\.\w+[\.\w\[\]]*)\s*$")
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/GenFds/FdfParser.py:71: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  ShortcutPcdPattern = compile("\s*\w+\s*=\s*(?P<value>(?:0x|0X)?[a-fA-F0-9]+)\s*\|\s*(?P<name>\w+\.\w+)\s*")
+ok
+test_GenFds_Ffs (CheckPythonSyntax.Tests.test_GenFds_Ffs) ... ok
+test_GenFds_FfsFileStatement (CheckPythonSyntax.Tests.test_GenFds_FfsFileStatement) ... ok
+test_GenFds_FfsInfStatement (CheckPythonSyntax.Tests.test_GenFds_FfsInfStatement) ... ok
+test_GenFds_Fv (CheckPythonSyntax.Tests.test_GenFds_Fv) ... ok
+test_GenFds_FvImageSection (CheckPythonSyntax.Tests.test_GenFds_FvImageSection) ... ok
+test_GenFds_GenFds (CheckPythonSyntax.Tests.test_GenFds_GenFds) ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/GenFds/GenFds.py:736: SyntaxWarning: "\S" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\S"? A raw string is also an option.
+  ReFileEnds = compile('\S+(.ui)$|\S+(fv.sec.txt)$|\S+(.pe32.txt)$|\S+(.te.txt)$|\S+(.pic.txt)$|\S+(.raw.txt)$|\S+(.ffs.txt)$')
+ok
+test_GenFds_GenFdsGlobalVariable (CheckPythonSyntax.Tests.test_GenFds_GenFdsGlobalVariable) ... ok
+test_GenFds_GuidSection (CheckPythonSyntax.Tests.test_GenFds_GuidSection) ... ok
+test_GenFds_OptRomFileStatement (CheckPythonSyntax.Tests.test_GenFds_OptRomFileStatement) ... ok
+test_GenFds_OptRomInfStatement (CheckPythonSyntax.Tests.test_GenFds_OptRomInfStatement) ... ok
+test_GenFds_OptionRom (CheckPythonSyntax.Tests.test_GenFds_OptionRom) ... ok
+test_GenFds_Region (CheckPythonSyntax.Tests.test_GenFds_Region) ... ok
+test_GenFds_Rule (CheckPythonSyntax.Tests.test_GenFds_Rule) ... ok
+test_GenFds_RuleComplexFile (CheckPythonSyntax.Tests.test_GenFds_RuleComplexFile) ... ok
+test_GenFds_RuleSimpleFile (CheckPythonSyntax.Tests.test_GenFds_RuleSimpleFile) ... ok
+test_GenFds_Section (CheckPythonSyntax.Tests.test_GenFds_Section) ... ok
+test_GenFds_SubTypeGuidSection (CheckPythonSyntax.Tests.test_GenFds_SubTypeGuidSection) ... ok
+test_GenFds_UiSection (CheckPythonSyntax.Tests.test_GenFds_UiSection) ... ok
+test_GenFds_VerSection (CheckPythonSyntax.Tests.test_GenFds_VerSection) ... ok
+test_GenFds___init__ (CheckPythonSyntax.Tests.test_GenFds___init__) ... ok
+test_GenPatchPcdTable_GenPatchPcdTable (CheckPythonSyntax.Tests.test_GenPatchPcdTable_GenPatchPcdTable) ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/GenPatchPcdTable/GenPatchPcdTable.py:34: SyntaxWarning: "\d" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\d"? A raw string is also an option.
+  symRe = re.compile('^([\da-fA-F]+):([\da-fA-F]+) +([\.\-:\\\\\w\?@\$<>]+) +([\da-fA-F]+)', re.UNICODE)
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/GenPatchPcdTable/GenPatchPcdTable.py:52: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  if re.match('^\s*Address\s*Size\s*Align\s*Out\s*In\s*Symbol\s*$', firstline):
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/GenPatchPcdTable/GenPatchPcdTable.py:62: SyntaxWarning: "\d" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\d"? A raw string is also an option.
+  valuePattern = re.compile('^([\da-fA-FxX]+)([\s\S]*)([_]*_gPcd_BinaryPatch_([\w]+))')
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/GenPatchPcdTable/GenPatchPcdTable.py:67: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  if status == 0 and (re.match('^\s*Address\s*Size\s*Align\s*Out\s*In\s*Symbol\s*$', line) \
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/GenPatchPcdTable/GenPatchPcdTable.py:80: SyntaxWarning: "\w" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\w"? A raw string is also an option.
+  dataPattern = re.compile('^.data._gPcd_BinaryPatch_([\w_\d]+)$')
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/GenPatchPcdTable/GenPatchPcdTable.py:139: SyntaxWarning: "\w" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\w"? A raw string is also an option.
+  symPattern = re.compile('^[_]+gPcd_BinaryPatch_([\w]+)')
+ok
+test_GenPatchPcdTable___init__ (CheckPythonSyntax.Tests.test_GenPatchPcdTable___init__) ... ok
+test_PatchPcdValue_PatchPcdValue (CheckPythonSyntax.Tests.test_PatchPcdValue_PatchPcdValue) ... ok
+test_PatchPcdValue___init__ (CheckPythonSyntax.Tests.test_PatchPcdValue___init__) ... ok
+test_Pkcs7Sign_Pkcs7Sign (CheckPythonSyntax.Tests.test_Pkcs7Sign_Pkcs7Sign) ... ok
+test_Rsa2048Sha256Sign_Rsa2048Sha256GenerateKeys (CheckPythonSyntax.Tests.test_Rsa2048Sha256Sign_Rsa2048Sha256GenerateKeys) ... ok
+test_Rsa2048Sha256Sign_Rsa2048Sha256Sign (CheckPythonSyntax.Tests.test_Rsa2048Sha256Sign_Rsa2048Sha256Sign) ... ok
+test_Split_Split (CheckPythonSyntax.Tests.test_Split_Split) ... ok
+test_Split___init__ (CheckPythonSyntax.Tests.test_Split___init__) ... ok
+test_Table_Table (CheckPythonSyntax.Tests.test_Table_Table) ... ok
+test_Table_TableDataModel (CheckPythonSyntax.Tests.test_Table_TableDataModel) ... ok
+test_Table_TableDec (CheckPythonSyntax.Tests.test_Table_TableDec) ... ok
+test_Table_TableDsc (CheckPythonSyntax.Tests.test_Table_TableDsc) ... ok
+test_Table_TableEotReport (CheckPythonSyntax.Tests.test_Table_TableEotReport) ... ok
+test_Table_TableFdf (CheckPythonSyntax.Tests.test_Table_TableFdf) ... ok
+test_Table_TableFile (CheckPythonSyntax.Tests.test_Table_TableFile) ... ok
+test_Table_TableFunction (CheckPythonSyntax.Tests.test_Table_TableFunction) ... ok
+test_Table_TableIdentifier (CheckPythonSyntax.Tests.test_Table_TableIdentifier) ... ok
+test_Table_TableInf (CheckPythonSyntax.Tests.test_Table_TableInf) ... ok
+test_Table_TablePcd (CheckPythonSyntax.Tests.test_Table_TablePcd) ... ok
+test_Table_TableQuery (CheckPythonSyntax.Tests.test_Table_TableQuery) ... ok
+test_Table_TableReport (CheckPythonSyntax.Tests.test_Table_TableReport) ... ok
+test_Table___init__ (CheckPythonSyntax.Tests.test_Table___init__) ... ok
+test_TargetTool_TargetTool (CheckPythonSyntax.Tests.test_TargetTool_TargetTool) ... ok
+test_TargetTool___init__ (CheckPythonSyntax.Tests.test_TargetTool___init__) ... ok
+test_Trim_Trim (CheckPythonSyntax.Tests.test_Trim_Trim) ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Trim/Trim.py:31: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  gLineControlDirective = re.compile('^\s*#(?:line)?\s+([0-9]+)\s+"*([^"]*)"')
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Trim/Trim.py:33: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  gTypedefPattern = re.compile("^\s*typedef\s+struct(\s+\w+)?\s*[{]*$", re.MULTILINE)
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Trim/Trim.py:35: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  gPragmaPattern = re.compile("^\s*#pragma\s+pack", re.MULTILINE)
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Trim/Trim.py:37: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  gTypedef_SinglePattern = re.compile("^\s*typedef", re.MULTILINE)
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Trim/Trim.py:39: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  gTypedef_MulPattern = re.compile("^\s*(typedef)?\s+(struct|union)(\s+\w+)?\s*[{]*$", re.MULTILINE)
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Trim/Trim.py:54: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  gAslIncludePattern = re.compile("^(\s*)[iI]nclude\s*\(\"?([^\"\(\)]+)\"\)", re.MULTILINE)
+ok
+test_UPT_BuildVersion (CheckPythonSyntax.Tests.test_UPT_BuildVersion) ... ok
+test_UPT_Core_DependencyRules (CheckPythonSyntax.Tests.test_UPT_Core_DependencyRules) ... ok
+test_UPT_Core_DistributionPackageClass (CheckPythonSyntax.Tests.test_UPT_Core_DistributionPackageClass) ... ok
+test_UPT_Core_FileHook (CheckPythonSyntax.Tests.test_UPT_Core_FileHook) ... ok
+test_UPT_Core_IpiDb (CheckPythonSyntax.Tests.test_UPT_Core_IpiDb) ... ok
+test_UPT_Core_PackageFile (CheckPythonSyntax.Tests.test_UPT_Core_PackageFile) ... ok
+test_UPT_Core___init__ (CheckPythonSyntax.Tests.test_UPT_Core___init__) ... ok
+test_UPT_GenMetaFile_GenDecFile (CheckPythonSyntax.Tests.test_UPT_GenMetaFile_GenDecFile) ... ok
+test_UPT_GenMetaFile_GenInfFile (CheckPythonSyntax.Tests.test_UPT_GenMetaFile_GenInfFile) ... ok
+test_UPT_GenMetaFile_GenMetaFileMisc (CheckPythonSyntax.Tests.test_UPT_GenMetaFile_GenMetaFileMisc) ... ok
+test_UPT_GenMetaFile_GenXmlFile (CheckPythonSyntax.Tests.test_UPT_GenMetaFile_GenXmlFile) ... ok
+test_UPT_GenMetaFile___init__ (CheckPythonSyntax.Tests.test_UPT_GenMetaFile___init__) ... ok
+test_UPT_InstallPkg (CheckPythonSyntax.Tests.test_UPT_InstallPkg) ... ok
+test_UPT_InventoryWs (CheckPythonSyntax.Tests.test_UPT_InventoryWs) ... ok
+test_UPT_Library_CommentGenerating (CheckPythonSyntax.Tests.test_UPT_Library_CommentGenerating) ... ok
+test_UPT_Library_CommentParsing (CheckPythonSyntax.Tests.test_UPT_Library_CommentParsing) ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Library/CommentParsing.py:241: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  MACRO_PATTERN = '[\t\s]*\$\([A-Z][_A-Z0-9]*\)'
+ok
+test_UPT_Library_DataType (CheckPythonSyntax.Tests.test_UPT_Library_DataType) ... ok
+test_UPT_Library_ExpressionValidate (CheckPythonSyntax.Tests.test_UPT_Library_ExpressionValidate) ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Library/ExpressionValidate.py:69: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  HEX_PATTERN = '[\t\s]*0[xX][a-fA-F0-9]+'
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Library/ExpressionValidate.py:70: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  INT_PATTERN = '[\t\s]*[0-9]+'
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Library/ExpressionValidate.py:71: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  MACRO_PATTERN = '[\t\s]*\$\(([A-Z][_A-Z0-9]*)\)'
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Library/ExpressionValidate.py:73: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  '[\t\s]*[_a-zA-Z][a-zA-Z0-9_]*[\t\s]*\.[\t\s]*[_a-zA-Z][a-zA-Z0-9_]*'
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Library/ExpressionValidate.py:74: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  QUOTED_PATTERN = '[\t\s]*L?"[^"]*"'
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Library/ExpressionValidate.py:75: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  BOOL_PATTERN = '[\t\s]*(true|True|TRUE|false|False|FALSE)'
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Library/ExpressionValidate.py:306: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  INT_RANGE_PATTERN = '[\t\s]*[0-9]+[\t\s]*-[\t\s]*[0-9]+'
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Library/ExpressionValidate.py:308: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  '[\t\s]*0[xX][a-fA-F0-9]+[\t\s]*-[\t\s]*0[xX][a-fA-F0-9]+'
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Library/ExpressionValidate.py:410: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  VALID_LIST_PATTERN = '(0[xX][0-9a-fA-F]+|[0-9]+)([\t\s]*,[\t\s]*(0[xX][0-9a-fA-F]+|[0-9]+))*'
+ok
+test_UPT_Library_GlobalData (CheckPythonSyntax.Tests.test_UPT_Library_GlobalData) ... ok
+test_UPT_Library_Misc (CheckPythonSyntax.Tests.test_UPT_Library_Misc) ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Library/Misc.py:72: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  RegFormatGuidPattern = re.compile("^\s*([0-9a-fA-F]){8}-"
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Library/Misc.py:76: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  "([0-9a-fA-F]){12}\s*$")
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Library/Misc.py:840: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  ReFileGuidPattern = re.compile("^\s*FILE_GUID\s*=.*$")
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Library/Misc.py:841: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  ReVerStringPattern = re.compile("^\s*VERSION_STRING\s*=.*$")
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Library/Misc.py:981: SyntaxWarning: "\-" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\-"? A raw string is also an option.
+  Pattern = '[a-zA-Z0-9_][a-zA-Z0-9_\-\.]*'
+ok
+test_UPT_Library_ParserValidate (CheckPythonSyntax.Tests.test_UPT_Library_ParserValidate) ... ok
+test_UPT_Library_Parsing (CheckPythonSyntax.Tests.test_UPT_Library_Parsing) ... ok
+test_UPT_Library_StringUtils (CheckPythonSyntax.Tests.test_UPT_Library_StringUtils) ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Library/StringUtils.py:26: SyntaxWarning: "\$" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\$"? A raw string is also an option.
+  gMACRO_PATTERN = re.compile("\$\(([_A-Z][_A-Z0-9]*)\)", re.UNICODE)
+ok
+test_UPT_Library_UniClassObject (CheckPythonSyntax.Tests.test_UPT_Library_UniClassObject) ... ok
+test_UPT_Library_Xml_XmlRoutines (CheckPythonSyntax.Tests.test_UPT_Library_Xml_XmlRoutines) ... ok
+test_UPT_Library_Xml___init__ (CheckPythonSyntax.Tests.test_UPT_Library_Xml___init__) ... ok
+test_UPT_Library___init__ (CheckPythonSyntax.Tests.test_UPT_Library___init__) ... ok
+test_UPT_Logger_Log (CheckPythonSyntax.Tests.test_UPT_Logger_Log) ... ok
+test_UPT_Logger_StringTable (CheckPythonSyntax.Tests.test_UPT_Logger_StringTable) ... ok
+test_UPT_Logger_ToolError (CheckPythonSyntax.Tests.test_UPT_Logger_ToolError) ... ok
+test_UPT_Logger___init__ (CheckPythonSyntax.Tests.test_UPT_Logger___init__) ... ok
+test_UPT_MkPkg (CheckPythonSyntax.Tests.test_UPT_MkPkg) ... ok
+test_UPT_Object_POM_CommonObject (CheckPythonSyntax.Tests.test_UPT_Object_POM_CommonObject) ... ok
+test_UPT_Object_POM_ModuleObject (CheckPythonSyntax.Tests.test_UPT_Object_POM_ModuleObject) ... ok
+test_UPT_Object_POM_PackageObject (CheckPythonSyntax.Tests.test_UPT_Object_POM_PackageObject) ... ok
+test_UPT_Object_POM___init__ (CheckPythonSyntax.Tests.test_UPT_Object_POM___init__) ... ok
+test_UPT_Object_Parser_DecObject (CheckPythonSyntax.Tests.test_UPT_Object_Parser_DecObject) ... ok
+test_UPT_Object_Parser_InfBinaryObject (CheckPythonSyntax.Tests.test_UPT_Object_Parser_InfBinaryObject) ... ok
+test_UPT_Object_Parser_InfBuildOptionObject (CheckPythonSyntax.Tests.test_UPT_Object_Parser_InfBuildOptionObject) ... ok
+test_UPT_Object_Parser_InfCommonObject (CheckPythonSyntax.Tests.test_UPT_Object_Parser_InfCommonObject) ... ok
+test_UPT_Object_Parser_InfDefineCommonObject (CheckPythonSyntax.Tests.test_UPT_Object_Parser_InfDefineCommonObject) ... ok
+test_UPT_Object_Parser_InfDefineObject (CheckPythonSyntax.Tests.test_UPT_Object_Parser_InfDefineObject) ... ok
+test_UPT_Object_Parser_InfDepexObject (CheckPythonSyntax.Tests.test_UPT_Object_Parser_InfDepexObject) ... ok
+test_UPT_Object_Parser_InfGuidObject (CheckPythonSyntax.Tests.test_UPT_Object_Parser_InfGuidObject) ... ok
+test_UPT_Object_Parser_InfHeaderObject (CheckPythonSyntax.Tests.test_UPT_Object_Parser_InfHeaderObject) ... ok
+test_UPT_Object_Parser_InfLibraryClassesObject (CheckPythonSyntax.Tests.test_UPT_Object_Parser_InfLibraryClassesObject) ... ok
+test_UPT_Object_Parser_InfMisc (CheckPythonSyntax.Tests.test_UPT_Object_Parser_InfMisc) ... ok
+test_UPT_Object_Parser_InfPackagesObject (CheckPythonSyntax.Tests.test_UPT_Object_Parser_InfPackagesObject) ... ok
+test_UPT_Object_Parser_InfPcdObject (CheckPythonSyntax.Tests.test_UPT_Object_Parser_InfPcdObject) ... ok
+test_UPT_Object_Parser_InfPpiObject (CheckPythonSyntax.Tests.test_UPT_Object_Parser_InfPpiObject) ... ok
+test_UPT_Object_Parser_InfProtocolObject (CheckPythonSyntax.Tests.test_UPT_Object_Parser_InfProtocolObject) ... ok
+test_UPT_Object_Parser_InfSoucesObject (CheckPythonSyntax.Tests.test_UPT_Object_Parser_InfSoucesObject) ... ok
+test_UPT_Object_Parser_InfUserExtensionObject (CheckPythonSyntax.Tests.test_UPT_Object_Parser_InfUserExtensionObject) ... ok
+test_UPT_Object_Parser___init__ (CheckPythonSyntax.Tests.test_UPT_Object_Parser___init__) ... ok
+test_UPT_Object___init__ (CheckPythonSyntax.Tests.test_UPT_Object___init__) ... ok
+test_UPT_Parser_DecParser (CheckPythonSyntax.Tests.test_UPT_Parser_DecParser) ... ok
+test_UPT_Parser_DecParserMisc (CheckPythonSyntax.Tests.test_UPT_Parser_DecParserMisc) ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Parser/DecParserMisc.py:28: SyntaxWarning: "\." is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\."? A raw string is also an option.
+  VERSION_PATTERN = '[0-9]+(\.[0-9]+)?'
+ok
+test_UPT_Parser_InfAsBuiltProcess (CheckPythonSyntax.Tests.test_UPT_Parser_InfAsBuiltProcess) ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Parser/InfAsBuiltProcess.py:56: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  RegFormatGuidPattern = re.compile("\s*([0-9a-fA-F]){8}-"
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Parser/InfAsBuiltProcess.py:60: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  "([0-9a-fA-F]){12}\s*")
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Parser/InfAsBuiltProcess.py:61: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  VersionPattern = re.compile('[\t\s]*\d+(\.\d+)?[\t\s]*')
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Parser/InfAsBuiltProcess.py:78: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  ReFindFileGuidPattern = re.compile("^\s*FILE_GUID\s*=.*$")
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Parser/InfAsBuiltProcess.py:79: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  ReFindVerStringPattern = re.compile("^\s*VERSION_STRING\s*=.*$")
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Parser/InfAsBuiltProcess.py:109: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  RePackageHeader = re.compile('^\s*\[Packages.*\].*$')
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Parser/InfAsBuiltProcess.py:110: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  ReDefineHeader = re.compile('^\s*\[Defines].*$')
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Parser/InfAsBuiltProcess.py:258: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  ReFindFileGuidPattern = re.compile("^\s*FILE_GUID\s*=.*$")
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Parser/InfAsBuiltProcess.py:259: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  ReFindVerStringPattern = re.compile("^\s*VERSION_STRING\s*=.*$")
+ok
+test_UPT_Parser_InfBinarySectionParser (CheckPythonSyntax.Tests.test_UPT_Parser_InfBinarySectionParser) ... ok
+test_UPT_Parser_InfBuildOptionSectionParser (CheckPythonSyntax.Tests.test_UPT_Parser_InfBuildOptionSectionParser) ... ok
+test_UPT_Parser_InfDefineSectionParser (CheckPythonSyntax.Tests.test_UPT_Parser_InfDefineSectionParser) ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Parser/InfDefineSectionParser.py:43: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  ArchList = re.split('\s+', TempArch)
+ok
+test_UPT_Parser_InfDepexSectionParser (CheckPythonSyntax.Tests.test_UPT_Parser_InfDepexSectionParser) ... ok
+test_UPT_Parser_InfGuidPpiProtocolSectionParser (CheckPythonSyntax.Tests.test_UPT_Parser_InfGuidPpiProtocolSectionParser) ... ok
+test_UPT_Parser_InfLibrarySectionParser (CheckPythonSyntax.Tests.test_UPT_Parser_InfLibrarySectionParser) ... ok
+test_UPT_Parser_InfPackageSectionParser (CheckPythonSyntax.Tests.test_UPT_Parser_InfPackageSectionParser) ... ok
+test_UPT_Parser_InfParser (CheckPythonSyntax.Tests.test_UPT_Parser_InfParser) ... ok
+test_UPT_Parser_InfParserMisc (CheckPythonSyntax.Tests.test_UPT_Parser_InfParserMisc) ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Parser/InfParserMisc.py:112: SyntaxWarning: "\$" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\$"? A raw string is also an option.
+  gQuotedMacro = re.compile(".*\".*\$\(%s\).*\".*"%(Macro))
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Parser/InfParserMisc.py:133: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  ReIsSourcesSection = re.compile("^\s*\[Sources.*\]\s.*$", re.IGNORECASE)
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Parser/InfParserMisc.py:134: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  ReIsBinarySection = re.compile("^\s*\[Binaries.*\]\s.*$", re.IGNORECASE)
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Parser/InfParserMisc.py:158: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  ReIsLibInstance = re.compile("^\s*##\s*@LIB_INSTANCES\s*$")
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Parser/InfParserMisc.py:174: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  ReIsAsBuildInstance = re.compile("^\s*##\s*@AsBuilt\s*$")
+ok
+test_UPT_Parser_InfPcdSectionParser (CheckPythonSyntax.Tests.test_UPT_Parser_InfPcdSectionParser) ... ok
+test_UPT_Parser_InfSectionParser (CheckPythonSyntax.Tests.test_UPT_Parser_InfSectionParser) ... ok
+test_UPT_Parser_InfSourceSectionParser (CheckPythonSyntax.Tests.test_UPT_Parser_InfSourceSectionParser) ... ok
+test_UPT_Parser___init__ (CheckPythonSyntax.Tests.test_UPT_Parser___init__) ... ok
+test_UPT_PomAdapter_DecPomAlignment (CheckPythonSyntax.Tests.test_UPT_PomAdapter_DecPomAlignment) ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/PomAdapter/DecPomAlignment.py:750: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  NOTNOT_Pattern = '[\t\s]*NOT[\t\s]+NOT[\t\s]*'
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/PomAdapter/DecPomAlignment.py:751: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  NOTGE_Pattern = '[\t\s]*NOT[\t\s]+GE[\t\s]*'
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/PomAdapter/DecPomAlignment.py:752: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  NOTLE_Pattern = '[\t\s]*NOT[\t\s]+LE[\t\s]*'
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/PomAdapter/DecPomAlignment.py:753: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  NOTGT_Pattern = '[\t\s]*NOT[\t\s]+GT[\t\s]*'
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/PomAdapter/DecPomAlignment.py:754: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  NOTLT_Pattern = '[\t\s]*NOT[\t\s]+LT[\t\s]*'
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/PomAdapter/DecPomAlignment.py:755: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  NOTEQ_Pattern = '[\t\s]*NOT[\t\s]+EQ[\t\s]*'
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/PomAdapter/DecPomAlignment.py:788: SyntaxWarning: "\." is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\."? A raw string is also an option.
+  Pattern = '[a-zA-Z0-9]{1,}\.[a-zA-Z0-9]{1,}'
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/PomAdapter/DecPomAlignment.py:817: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  QUOTED_PATTERN = '[\t\s]*L?"[^"]*"'
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/PomAdapter/DecPomAlignment.py:850: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  QUOTED_PATTERN = '[\t\s]*L?"[^"]*"'
+ok
+test_UPT_PomAdapter_InfPomAlignment (CheckPythonSyntax.Tests.test_UPT_PomAdapter_InfPomAlignment) ... ok
+test_UPT_PomAdapter_InfPomAlignmentMisc (CheckPythonSyntax.Tests.test_UPT_PomAdapter_InfPomAlignmentMisc) ... ok
+test_UPT_PomAdapter___init__ (CheckPythonSyntax.Tests.test_UPT_PomAdapter___init__) ... ok
+test_UPT_ReplacePkg (CheckPythonSyntax.Tests.test_UPT_ReplacePkg) ... ok
+test_UPT_RmPkg (CheckPythonSyntax.Tests.test_UPT_RmPkg) ... ok
+test_UPT_TestInstall (CheckPythonSyntax.Tests.test_UPT_TestInstall) ... ok
+test_UPT_UPT (CheckPythonSyntax.Tests.test_UPT_UPT) ... ok
+test_UPT_UnitTest_CommentGeneratingUnitTest (CheckPythonSyntax.Tests.test_UPT_UnitTest_CommentGeneratingUnitTest) ... ok
+test_UPT_UnitTest_CommentParsingUnitTest (CheckPythonSyntax.Tests.test_UPT_UnitTest_CommentParsingUnitTest) ... ok
+test_UPT_UnitTest_DecParserTest (CheckPythonSyntax.Tests.test_UPT_UnitTest_DecParserTest) ... ok
+test_UPT_UnitTest_DecParserUnitTest (CheckPythonSyntax.Tests.test_UPT_UnitTest_DecParserUnitTest) ... ok
+test_UPT_UnitTest_InfBinarySectionTest (CheckPythonSyntax.Tests.test_UPT_UnitTest_InfBinarySectionTest) ... ok
+test_UPT_Xml_CommonXml (CheckPythonSyntax.Tests.test_UPT_Xml_CommonXml) ... ok
+test_UPT_Xml_GuidProtocolPpiXml (CheckPythonSyntax.Tests.test_UPT_Xml_GuidProtocolPpiXml) ... ok
+test_UPT_Xml_IniToXml (CheckPythonSyntax.Tests.test_UPT_Xml_IniToXml) ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Xml/IniToXml.py:203: SyntaxWarning: "\." is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\."? A raw string is also an option.
+  'Version'   :   ('[0-9]+(\.[0-9]+)?', ST.ERR_VERSION_VALUE % \
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Xml/IniToXml.py:205: SyntaxWarning: "\." is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\."? A raw string is also an option.
+  'XmlSpecification' : ('1\.1', ST.ERR_VERSION_XMLSPEC % Value)
+ok
+test_UPT_Xml_ModuleSurfaceAreaXml (CheckPythonSyntax.Tests.test_UPT_Xml_ModuleSurfaceAreaXml) ... ok
+test_UPT_Xml_PackageSurfaceAreaXml (CheckPythonSyntax.Tests.test_UPT_Xml_PackageSurfaceAreaXml) ... ok
+test_UPT_Xml_PcdXml (CheckPythonSyntax.Tests.test_UPT_Xml_PcdXml) ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Xml/PcdXml.py:103: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  INT_RANGE_PATTERN1 = '[\t\s]*[0-9]+[\t\s]*-[\t\s]*[0-9]+'
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Xml/PcdXml.py:104: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  INT_RANGE_PATTERN2 = '[\t\s]*(LT|GT|LE|GE|XOR|EQ)[\t\s]+\d+[\t\s]*'
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Xml/PcdXml.py:106: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  '[\t\s]*0[xX][a-fA-F0-9]+[\t\s]*-[\t\s]*0[xX][a-fA-F0-9]+'
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Xml/PcdXml.py:107: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  HEX_RANGE_PATTERN2 = '[\t\s]*(LT|GT|LE|GE|XOR|EQ)[\t\s]+0[xX][a-fA-F0-9]+[\t\s]*'
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Xml/PcdXml.py:161: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  '[\t\s]*[_a-zA-Z][a-zA-Z0-9_]*[\t\s]*\.[\t\s]*[_a-zA-Z][a-zA-Z0-9_]*[\t\s]*'
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Xml/PcdXml.py:163: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  '[\t\s]*\([\t\s]*'+PCD_PATTERN+'[\t\s]+GE[\t\s]+\d+[\t\s]*\)[\t\s]+AND[\t\s]+\([\t\s]*'+\
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Xml/PcdXml.py:163: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  '[\t\s]*\([\t\s]*'+PCD_PATTERN+'[\t\s]+GE[\t\s]+\d+[\t\s]*\)[\t\s]+AND[\t\s]+\([\t\s]*'+\
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Xml/PcdXml.py:164: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  PCD_PATTERN+'[\t\s]+LE[\t\s]+\d+[\t\s]*\)'
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Xml/PcdXml.py:166: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  IntPattern2 = '[\t\s]*'+PCD_PATTERN+'[\t\s]+(LT|GT|LE|GE|XOR|EQ)[\t\s]+\d+[\t\s]*'
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Xml/PcdXml.py:166: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  IntPattern2 = '[\t\s]*'+PCD_PATTERN+'[\t\s]+(LT|GT|LE|GE|XOR|EQ)[\t\s]+\d+[\t\s]*'
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Xml/PcdXml.py:169: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  '[\t\s]*\([\t\s]*'+PCD_PATTERN+'[\t\s]+GE[\t\s]+0[xX][0-9a-fA-F]+[\t\s]*\)[\t\s]+AND[\t\s]+\([\t\s]*'+\
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Xml/PcdXml.py:169: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  '[\t\s]*\([\t\s]*'+PCD_PATTERN+'[\t\s]+GE[\t\s]+0[xX][0-9a-fA-F]+[\t\s]*\)[\t\s]+AND[\t\s]+\([\t\s]*'+\
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Xml/PcdXml.py:170: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  PCD_PATTERN+'[\t\s]+LE[\t\s]+0[xX][0-9a-fA-F]+[\t\s]*\)'
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Xml/PcdXml.py:172: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  HexPattern2 = '[\t\s]*'+PCD_PATTERN+'[\t\s]+(LT|GT|LE|GE|XOR|EQ)[\t\s]+0[xX][0-9a-zA-Z]+[\t\s]*'
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Xml/PcdXml.py:172: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  HexPattern2 = '[\t\s]*'+PCD_PATTERN+'[\t\s]+(LT|GT|LE|GE|XOR|EQ)[\t\s]+0[xX][0-9a-zA-Z]+[\t\s]*'
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Xml/PcdXml.py:183: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  RangeItemList = re.compile('[\t\s]*0[xX][0-9a-fA-F]+[\t\s]*').findall(HexMatchedItem)
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Xml/PcdXml.py:207: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  RangeItemList = re.compile('[\t\s]*\d+[\t\s]*').findall(MatchedItem)
+ok
+test_UPT_Xml_XmlParser (CheckPythonSyntax.Tests.test_UPT_Xml_XmlParser) ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Xml/XmlParser.py:284: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  '[\s\r\n]*"', '', XmlContent)
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Xml/XmlParser.py:287: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  '[\s\r\n]*"', '', XmlContent)
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Xml/XmlParser.py:293: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  '</SupArchList>[\s\r\n]*', '', XmlContent)
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Xml/XmlParser.py:300: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  'common[\s\r\n]*</SupArchList>[\s\r\n]*', '', XmlContent)
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Xml/XmlParser.py:307: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  '[\s\r\n]*"', '', XmlContent)
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/UPT/Xml/XmlParser.py:310: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  '[\s\r\n]*"', '', XmlContent)
+ok
+test_UPT_Xml_XmlParserMisc (CheckPythonSyntax.Tests.test_UPT_Xml_XmlParserMisc) ... ok
+test_UPT_Xml___init__ (CheckPythonSyntax.Tests.test_UPT_Xml___init__) ... ok
+test_Workspace_BuildClassObject (CheckPythonSyntax.Tests.test_Workspace_BuildClassObject) ... ok
+test_Workspace_DecBuildData (CheckPythonSyntax.Tests.test_Workspace_DecBuildData) ... ok
+test_Workspace_DscBuildData (CheckPythonSyntax.Tests.test_Workspace_DscBuildData) ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Workspace/DscBuildData.py:94: SyntaxWarning: "\S" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\S"? A raw string is also an option.
+  !INCLUDE $(BASE_TOOLS_PATH)\Source\C\Makefiles\ms.common
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Workspace/DscBuildData.py:113: SyntaxWarning: "\d" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\d"? A raw string is also an option.
+  Pattern = re.compile('^[1-9]\d*|0$')
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Workspace/DscBuildData.py:2843: SyntaxWarning: "\%" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\%"? A raw string is also an option.
+  MakeApp = MakeApp + 'APPFILE = %s\%s.exe\n' % (self.OutputPath, PcdValueInitName) + 'APPNAME = %s\n' % (PcdValueInitName) + 'OBJECTS = %s\%s.obj %s.obj\n' % (self.OutputPath, PcdValueInitName, os.path.join(self.OutputPath, PcdValueCommonName)) + 'INC = '
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Workspace/DscBuildData.py:2843: SyntaxWarning: "\%" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\%"? A raw string is also an option.
+  MakeApp = MakeApp + 'APPFILE = %s\%s.exe\n' % (self.OutputPath, PcdValueInitName) + 'APPNAME = %s\n' % (PcdValueInitName) + 'OBJECTS = %s\%s.obj %s.obj\n' % (self.OutputPath, PcdValueInitName, os.path.join(self.OutputPath, PcdValueCommonName)) + 'INC = '
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Workspace/DscBuildData.py:2952: SyntaxWarning: "\C" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\C"? A raw string is also an option.
+  PcdValueCommonPath = os.path.normpath(mws.join(GlobalData.gGlobalDefines["EDK_TOOLS_PATH"], "Source\C\Common\PcdValueCommon.c"))
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Workspace/DscBuildData.py:2953: SyntaxWarning: "\P" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\P"? A raw string is also an option.
+  MakeApp = MakeApp + '%s\PcdValueCommon.c : %s\n' % (self.OutputPath, PcdValueCommonPath)
+ok
+test_Workspace_InfBuildData (CheckPythonSyntax.Tests.test_Workspace_InfBuildData) ... ok
+test_Workspace_MetaDataTable (CheckPythonSyntax.Tests.test_Workspace_MetaDataTable) ... ok
+test_Workspace_MetaFileCommentParser (CheckPythonSyntax.Tests.test_Workspace_MetaFileCommentParser) ... ok
+test_Workspace_MetaFileParser (CheckPythonSyntax.Tests.test_Workspace_MetaFileParser) ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Source/Python/Workspace/MetaFileParser.py:1900: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  Line = re.sub(',[\s]*', TAB_COMMA_SPLIT, self._CurrentLine)
+ok
+test_Workspace_MetaFileTable (CheckPythonSyntax.Tests.test_Workspace_MetaFileTable) ... ok
+test_Workspace_WorkspaceCommon (CheckPythonSyntax.Tests.test_Workspace_WorkspaceCommon) ... ok
+test_Workspace_WorkspaceDatabase (CheckPythonSyntax.Tests.test_Workspace_WorkspaceDatabase) ... ok
+test_Workspace___init__ (CheckPythonSyntax.Tests.test_Workspace___init__) ... ok
+test_build_BuildReport (CheckPythonSyntax.Tests.test_build_BuildReport) ... ok
+test_build___init__ (CheckPythonSyntax.Tests.test_build___init__) ... ok
+test_build_build (CheckPythonSyntax.Tests.test_build_build) ... ok
+test_build_buildoptions (CheckPythonSyntax.Tests.test_build_buildoptions) ... ok
+test_sitecustomize (CheckPythonSyntax.Tests.test_sitecustomize) ... ok
+test_tests_Split_test_split (CheckPythonSyntax.Tests.test_tests_Split_test_split) ... ok
+test32bitUnicodeCharInUtf8Comment (CheckUnicodeSourceFiles.Tests.test32bitUnicodeCharInUtf8Comment) ... ok
+test32bitUnicodeCharInUtf8File (CheckUnicodeSourceFiles.Tests.test32bitUnicodeCharInUtf8File) ... ok
+testSupplementaryPlaneUnicodeCharInUtf16File (CheckUnicodeSourceFiles.Tests.testSupplementaryPlaneUnicodeCharInUtf16File) ... ok
+testSurrogatePairUnicodeCharInUtf16File (CheckUnicodeSourceFiles.Tests.testSurrogatePairUnicodeCharInUtf16File) ... ok
+testSurrogatePairUnicodeCharInUtf8File (CheckUnicodeSourceFiles.Tests.testSurrogatePairUnicodeCharInUtf8File) ... ok
+testSurrogatePairUnicodeCharInUtf8FileWithBom (CheckUnicodeSourceFiles.Tests.testSurrogatePairUnicodeCharInUtf8FileWithBom) ... ok
+testUtf16InUniFile (CheckUnicodeSourceFiles.Tests.testUtf16InUniFile) ... ok
+testValidUtf8File (CheckUnicodeSourceFiles.Tests.testValidUtf8File) ... ok
+testValidUtf8FileWithBom (CheckUnicodeSourceFiles.Tests.testValidUtf8FileWithBom) ... ok
+
+----------------------------------------------------------------------
+Ran 302 tests in 0.668s
+
+OK
+make[1]: Leaving directory '/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/Tests'
+make: Leaving directory '/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools'
++ SPLIT_DSDT=false
++ EXT=
++ '[' -f configs/devices/a145f.conf ']'
++ source configs/devices/a145f.conf
+++ SOC_PLATFORM=EXYNOS850
+++ VENDOR_NAME=Samsung
+++ PLATFORM_NAME=a145f
+++ BOOTIMG_OS_PATCH_LEVEL=2025-01
+++ BOOTIMG_OS_VERSION=15.0.0
+++ BOOTIMG_HEADER_VERSION=4
+++ FD_BASE=0xa1000000
+++ FD_SIZE=0x00700000
++ typeset -l SOC_PLATFORM_L=EXYNOS850
++ '[' -f configs/exynos850.conf ']'
++ source configs/exynos850.conf
+++ FD_BASE=0x90000000
+++ FD_SIZE=0x00700000
++ source configs/devices/a145f.conf
+++ SOC_PLATFORM=EXYNOS850
+++ VENDOR_NAME=Samsung
+++ PLATFORM_NAME=a145f
+++ BOOTIMG_OS_PATCH_LEVEL=2025-01
+++ BOOTIMG_OS_VERSION=15.0.0
+++ BOOTIMG_HEADER_VERSION=4
+++ FD_BASE=0xa1000000
+++ FD_SIZE=0x00700000
++ false
++ _load_platform_hooks Platform/platform.sh.inc
++ '[' -f /home/gunbileg/Downloads/edk2-exynos850-a145f/Platform/platform.sh.inc ']'
++ _load_platform_hooks Silicon/platform.sh.inc
++ '[' -f /home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/platform.sh.inc ']'
++ source /home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/platform.sh.inc
++ _load_platform_hooks Silicon/Qualcomm/platform.sh.inc
++ '[' -f /home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Qualcomm/platform.sh.inc ']'
++ _load_platform_hooks Platform/Samsung/platform.sh.inc
++ '[' -f /home/gunbileg/Downloads/edk2-exynos850-a145f/Platform/Samsung/platform.sh.inc ']'
++ _load_platform_hooks Silicon/Qualcomm/exynos850/platform.sh.inc
++ '[' -f /home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Qualcomm/exynos850/platform.sh.inc ']'
++ _load_platform_hooks Platform/Samsung/exynos850/platform.sh.inc
++ '[' -f /home/gunbileg/Downloads/edk2-exynos850-a145f/Platform/Samsung/exynos850/platform.sh.inc ']'
++ _load_platform_hooks Platform/Samsung/exynos850/a145f.sh.inc
++ '[' -f /home/gunbileg/Downloads/edk2-exynos850-a145f/Platform/Samsung/exynos850/a145f.sh.inc ']'
++ source /home/gunbileg/Downloads/edk2-exynos850-a145f/Platform/Samsung/exynos850/a145f.sh.inc
++ _load_platform_hooks Platform/Samsung/exynos850/a145f.sh.inc
++ '[' -f /home/gunbileg/Downloads/edk2-exynos850-a145f/Platform/Samsung/exynos850/a145f.sh.inc ']'
++ source /home/gunbileg/Downloads/edk2-exynos850-a145f/Platform/Samsung/exynos850/a145f.sh.inc
++ _call_hook platform_pre_acpi
++ local NAME=platform_pre_acpi
++ shift
++ declare -F platform_pre_acpi
++ return 0
++ false
++ rm -f /home/gunbileg/Downloads/edk2-exynos850-a145f/boot-a145f.img '/home/gunbileg/Downloads/edk2-exynos850-a145f/uefi-a145f*'
++ case "${MODE}" in
++ _MODE=RELEASE
++ echo 'Building BootShim'
+Building BootShim
++ pushd /home/gunbileg/Downloads/edk2-exynos850-a145f/tools/BootShim
+~/Downloads/edk2-exynos850-a145f/tools/BootShim ~/Downloads/edk2-exynos850-a145f
++ rm -f BootShim.bin BootShim.elf BootShim.Dualboot.bin BootShim.Dualboot.elf
++ make UEFI_BASE=0xa1000000 UEFI_SIZE=0x00700000
+aarch64-linux-gnu-gcc -c BootShim.S -o BootShim.elf -DUEFI_BASE=0xa1000000 -DUEFI_SIZE=0x00700000
+aarch64-linux-gnu-objcopy -O binary BootShim.elf BootShim.bin
+aarch64-linux-gnu-gcc -c BootShim.Dualboot.S -o BootShim.Dualboot.elf -DUEFI_BASE=0xa1000000 -DUEFI_SIZE=0x00700000
+aarch64-linux-gnu-objcopy -O binary BootShim.Dualboot.elf BootShim.Dualboot.bin
++ popd
+~/Downloads/edk2-exynos850-a145f
++ _call_hook platform_pre_build
++ local NAME=platform_pre_build
++ shift
++ declare -F platform_pre_build
++ return 0
++ mkdir -p /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/Conf
++ cp /home/gunbileg/Downloads/edk2-exynos850-a145f/tools/build_rule.txt /home/gunbileg/Downloads/edk2-exynos850-a145f/tools/tools_def.txt /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/Conf/
++ build -s -n 0 -a AARCH64 -t CLANG38 -p /home/gunbileg/Downloads/edk2-exynos850-a145f/Platform/Samsung/exynos850/a145f.dsc -b RELEASE -D FIRMWARE_VER=077c285 -D USE_UART=0 -D FIX_CLANG=0 -D NO_EXCEPTION_DISPLAY=0 -D FD_BASE=0xa1000000 -D FD_SIZE=0x00700000 -D ENABLE_LINUX_UTILS=
+Build environment: Linux-7.0.0-38-generic-x86_64-with-glibc2.43
+Build start time: 15:35:36, Oct.17 2026
+
+WORKSPACE        = /home/gunbileg/Downloads/edk2-exynos850-a145f/workspace
+PACKAGES_PATH    = /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2:/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2-platforms:/home/gunbileg/Downloads/edk2-exynos850-a145f/GPLDrivers/Library/SimpleInit:/home/gunbileg/Downloads/edk2-exynos850-a145f:/home/gunbileg/Downloads/edk2-exynos850-a145f/GPLDrivers
+EDK_TOOLS_PATH   = /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools
+CONF_PATH        = /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/Conf
+PYTHON_COMMAND   = /usr/bin/python3
+Parser...
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/ExynosCommonDsc.inc(26): warning: Suspicious expression: == Comparison between Operand of string type and Boolean/Number Type always return False.
+    !if $(ENABLE_LINUX_UTILS) == 1 
+Parser...
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/ExynosCommonDsc.inc(26): warning: Suspicious expression: == Comparison between Operand of string type and Boolean/Number Type always return False.
+    !if $(ENABLE_LINUX_UTILS) == 1 
+
+
+Processing meta-data Parser...
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/ExynosCommonDsc.inc(26): warning: Suspicious expression: == Comparison between Operand of string type and Boolean/Number Type always return False.
+    !if $(ENABLE_LINUX_UTILS) == 1 
+.
+Architecture(s)  = AARCH64
+Build target     = RELEASE
+Toolchain        = CLANG38
+
+Active Platform          = /home/gunbileg/Downloads/edk2-exynos850-a145f/Platform/Samsung/exynos850/a145f.dsc
+Parser...
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/ExynosCommonDsc.inc(26): warning: Suspicious expression: == Comparison between Operand of string type and Boolean/Number Type always return False.
+    !if $(ENABLE_LINUX_UTILS) == 1 
+Parser...
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/ExynosCommonDsc.inc(26): warning: Suspicious expression: == Comparison between Operand of string type and Boolean/Number Type always return False.
+    !if $(ENABLE_LINUX_UTILS) == 1 
+Parser...
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Platform/Samsung/exynos850/exynos850.fdf(342): warning: Suspicious expression: == Comparison between Operand of string type and Boolean/Number Type always return False.
+    !if $(ENABLE_LINUX_UTILS) == 1
+
+#Parser...
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/ExynosCommonDsc.inc(26): warning: Suspicious expression: == Comparison between Operand of string type and Boolean/Number Type always return False.
+    !if $(ENABLE_LINUX_UTILS) == 1 
+Parser...
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/ExynosCommonDsc.inc(26): warning: Suspicious expression: == Comparison between Operand of string type and Boolean/Number Type always return False.
+    !if $(ENABLE_LINUX_UTILS) == 1 
+Parser...
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/ExynosCommonDsc.inc(26): warning: Suspicious expression: == Comparison between Operand of string type and Boolean/Number Type always return False.
+    !if $(ENABLE_LINUX_UTILS) == 1 
+Parser...
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/ExynosCommonDsc.inc(26): warning: Suspicious expression: == Comparison between Operand of string type and Boolean/Number Type always return False.
+    !if $(ENABLE_LINUX_UTILS) == 1 
+Parser...
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/ExynosCommonDsc.inc(26): warning: Suspicious expression: == Comparison between Operand of string type and Boolean/Number Type always return False.
+    !if $(ENABLE_LINUX_UTILS) == 1 
+Parser...
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/ExynosCommonDsc.inc(26): warning: Suspicious expression: == Comparison between Operand of string type and Boolean/Number Type always return False.
+    !if $(ENABLE_LINUX_UTILS) == 1 
+Parser...
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/ExynosCommonDsc.inc(26): warning: Suspicious expression: == Comparison between Operand of string type and Boolean/Number Type always return False.
+    !if $(ENABLE_LINUX_UTILS) == 1 
+Parser...
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/ExynosCommonDsc.inc(26): warning: Suspicious expression: == Comparison between Operand of string type and Boolean/Number Type always return False.
+    !if $(ENABLE_LINUX_UTILS) == 1 
+Parser...
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/ExynosCommonDsc.inc(26): warning: Suspicious expression: == Comparison between Operand of string type and Boolean/Number Type always return False.
+    !if $(ENABLE_LINUX_UTILS) == 1 
+Parser...
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/ExynosCommonDsc.inc(26): warning: Suspicious expression: == Comparison between Operand of string type and Boolean/Number Type always return False.
+    !if $(ENABLE_LINUX_UTILS) == 1 
+Parser...
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/ExynosCommonDsc.inc(26): warning: Suspicious expression: == Comparison between Operand of string type and Boolean/Number Type always return False.
+    !if $(ENABLE_LINUX_UTILS) == 1 
+Parser...
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/ExynosCommonDsc.inc(26): warning: Suspicious expression: == Comparison between Operand of string type and Boolean/Number Type always return False.
+    !if $(ENABLE_LINUX_UTILS) == 1 
+Parser...
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/ExynosCommonDsc.inc(26): warning: Suspicious expression: == Comparison between Operand of string type and Boolean/Number Type always return False.
+    !if $(ENABLE_LINUX_UTILS) == 1 
+Parser...
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/ExynosCommonDsc.inc(26): warning: Suspicious expression: == Comparison between Operand of string type and Boolean/Number Type always return False.
+    !if $(ENABLE_LINUX_UTILS) == 1 
+Parser...
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/ExynosCommonDsc.inc(26): warning: Suspicious expression: == Comparison between Operand of string type and Boolean/Number Type always return False.
+    !if $(ENABLE_LINUX_UTILS) == 1 
+Parser...
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/ExynosCommonDsc.inc(26): warning: Suspicious expression: == Comparison between Operand of string type and Boolean/Number Type always return False.
+    !if $(ENABLE_LINUX_UTILS) == 1 
+Parser...
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/ExynosCommonDsc.inc(26): warning: Suspicious expression: == Comparison between Operand of string type and Boolean/Number Type always return False.
+    !if $(ENABLE_LINUX_UTILS) == 1 
+Parser...
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/ExynosCommonDsc.inc(26): warning: Suspicious expression: == Comparison between Operand of string type and Boolean/Number Type always return False.
+    !if $(ENABLE_LINUX_UTILS) == 1 
+Parser...
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/ExynosCommonDsc.inc(26): warning: Suspicious expression: == Comparison between Operand of string type and Boolean/Number Type always return False.
+    !if $(ENABLE_LINUX_UTILS) == 1 
+Parser...
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/ExynosCommonDsc.inc(26): warning: Suspicious expression: == Comparison between Operand of string type and Boolean/Number Type always return False.
+    !if $(ENABLE_LINUX_UTILS) == 1 
+Parser...
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/ExynosCommonDsc.inc(26): warning: Suspicious expression: == Comparison between Operand of string type and Boolean/Number Type always return False.
+    !if $(ENABLE_LINUX_UTILS) == 1 
+Parser...
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/ExynosCommonDsc.inc(26): warning: Suspicious expression: == Comparison between Operand of string type and Boolean/Number Type always return False.
+    !if $(ENABLE_LINUX_UTILS) == 1 
+Parser...
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/ExynosCommonDsc.inc(26): warning: Suspicious expression: == Comparison between Operand of string type and Boolean/Number Type always return False.
+    !if $(ENABLE_LINUX_UTILS) == 1 
+Parser...
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/ExynosCommonDsc.inc(26): warning: Suspicious expression: == Comparison between Operand of string type and Boolean/Number Type always return False.
+    !if $(ENABLE_LINUX_UTILS) == 1 
+Parser...
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/ExynosCommonDsc.inc(26): warning: Suspicious expression: == Comparison between Operand of string type and Boolean/Number Type always return False.
+    !if $(ENABLE_LINUX_UTILS) == 1 
+Parser...
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/ExynosCommonDsc.inc(26): warning: Suspicious expression: == Comparison between Operand of string type and Boolean/Number Type always return False.
+    !if $(ENABLE_LINUX_UTILS) == 1 
+Parser...
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/ExynosCommonDsc.inc(26): warning: Suspicious expression: == Comparison between Operand of string type and Boolean/Number Type always return False.
+    !if $(ENABLE_LINUX_UTILS) == 1 
+Parser...
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/ExynosCommonDsc.inc(26): warning: Suspicious expression: == Comparison between Operand of string type and Boolean/Number Type always return False.
+    !if $(ENABLE_LINUX_UTILS) == 1 
+Parser...
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/ExynosCommonDsc.inc(26): warning: Suspicious expression: == Comparison between Operand of string type and Boolean/Number Type always return False.
+    !if $(ENABLE_LINUX_UTILS) == 1 
+Parser...
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/ExynosCommonDsc.inc(26): warning: Suspicious expression: == Comparison between Operand of string type and Boolean/Number Type always return False.
+    !if $(ENABLE_LINUX_UTILS) == 1 
+Parser...
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/ExynosCommonDsc.inc(26): warning: Suspicious expression: == Comparison between Operand of string type and Boolean/Number Type always return False.
+    !if $(ENABLE_LINUX_UTILS) == 1 
+Parser...
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/ExynosCommonDsc.inc(26): warning: Suspicious expression: == Comparison between Operand of string type and Boolean/Number Type always return False.
+    !if $(ENABLE_LINUX_UTILS) == 1 
+.. done!
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/GPLDrivers/Library/SimpleInit/libs/json-c/JSONC.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/Exynos850Pkg/Library/KeypadDeviceImplLib/KeypadDeviceImplLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/Exynos850Pkg/Library/PlatformPeiLib/PlatformPeiLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/EmbeddedPkg/Library/PrePiExtractGuidedSectionLib/PrePiExtractGuidedSectionLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/EmbeddedPkg/Library/PrePiHobLib/PrePiHobLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/EmbeddedPkg/Library/PrePiMemoryAllocationLib/PrePiMemoryAllocationLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/Library/MemoryInitPeiLib/PeiMemoryAllocationLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/Exynos850Pkg/Library/PlatformPrePiLib/PlatformPrePiLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/ArmPlatformPkg/Library/PrePiHobListPointerLib/PrePiHobListPointerLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/EmbeddedPkg/Library/PrePiLib/PrePiLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdePkg/Library/BasePerformanceLibNull/BasePerformanceLibNull.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/Exynos850Pkg/Library/SafeMmioLib/SafeMmioLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/GPLDrivers/Library/SimpleInit/libs/lodepng/LodePNG.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/GPLDrivers/Library/SimpleInit/libs/regex/RegexLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/GPLDrivers/Library/SimpleInit/src/boot/SimpleInitBoot.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/GPLDrivers/Library/SimpleInit/libs/libufdt/UfdtLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/GPLDrivers/Library/SimpleInit/src/confd/SimpleInitConfd.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/GPLDrivers/Library/SimpleInit/src/loggerd/SimpleInitLoggerd.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/GPLDrivers/Library/SimpleInit/src/assets/SimpleInitAssets.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Library/CustomizedDisplayLib/CustomizedDisplayLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdePkg/Library/BaseCpuLib/BaseCpuLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/ArmPkg/Library/ArmMmuLib/ArmMmuBaseLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/GPLDrivers/Library/SimpleInit/src/lua/SimpleInitLua.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/GPLDrivers/Library/SimpleInit/libs/zlib/Zlib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Library/NonDiscoverableDeviceRegistrationLib/NonDiscoverableDeviceRegistrationLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/GPLDrivers/Library/SimpleInit/libs/lua/LuaLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/GPLDrivers/Library/SimpleInit/libs/stb/STBLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/GPLDrivers/Library/SimpleInit/libs/mxml/MiniXML.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/GPLDrivers/Library/SimpleInit/libs/libzip/ZipLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Library/FrameBufferBltLib/FrameBufferBltLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/GPLDrivers/Library/SimpleInit/src/compress/SimpleInitCompress.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Platform/RenegadePkg/Library/PlatformBootManagerLib/PlatformBootManagerLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Library/BootLogoLib/BootLogoLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Library/DxeCapsuleLibNull/DxeCapsuleLibNull.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/Exynos850Pkg/Library/MsPlatformDevicesLib/MsPlatformDevicesLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/Library/MemoryMapHelperLib/MemoryMapHelperLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/GPLDrivers/Library/SimpleInit/libs/nanosvg/NanoSVG.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdePkg/Library/BaseDebugLibNull/BaseDebugLibNull.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/ShellPkg/Library/UefiShellAcpiViewCommandLib/UefiShellAcpiViewCommandLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/ShellPkg/Library/UefiShellNetwork1CommandsLib/UefiShellNetwork1CommandsLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/ShellPkg/Library/UefiShellInstall1CommandsLib/UefiShellInstall1CommandsLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/ShellPkg/Library/UefiShellDebug1CommandsLib/UefiShellDebug1CommandsLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/ShellPkg/Library/UefiShellDriver1CommandsLib/UefiShellDriver1CommandsLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/ShellPkg/Library/UefiShellLevel3CommandsLib/UefiShellLevel3CommandsLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/ShellPkg/Library/UefiShellLevel1CommandsLib/UefiShellLevel1CommandsLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/ShellPkg/Library/UefiShellLevel2CommandsLib/UefiShellLevel2CommandsLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/NetworkPkg/Library/DxeNetLib/DxeNetLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/ShellPkg/Library/UefiShellBcfgCommandLib/UefiShellBcfgCommandLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/ShellPkg/Library/UefiShellCommandLib/UefiShellCommandLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/ShellPkg/Library/UefiHandleParsingLib/UefiHandleParsingLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/ShellPkg/Library/UefiShellLib/UefiShellLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdePkg/Library/BaseOrderedCollectionRedBlackTreeLib/BaseOrderedCollectionRedBlackTreeLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdePkg/Library/UefiFileHandleLib/UefiFileHandleLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/GPLDrivers/Library/SimpleInit/libs/hivex/HivexLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/GPLDrivers/Library/SimpleInit/libs/FreeType.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Library/LzmaCustomDecompressLib/LzmaCustomDecompressLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Library/DxeCrc32GuidedSectionExtractLib/DxeCrc32GuidedSectionExtractLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/ArmPkg/Library/ArmExceptionLib/ArmExceptionLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Library/DebugAgentLibNull/DebugAgentLibNull.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Library/DxeCorePerformanceLib/DxeCorePerformanceLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdePkg/Library/BaseUefiDecompressLib/BaseUefiDecompressLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdePkg/Library/DxeExtractGuidedSectionLib/DxeExtractGuidedSectionLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/Exynos850Pkg/Library/DefaultExceptionHandlerLibSafe/DefaultExceptionHandlerLibSafe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/Exynos850Pkg/Library/PlatformMemoryMapLibA145f/PlatformMemoryMapLibA145f.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Library/DxeCoreMemoryAllocationLib/DxeCoreMemoryAllocationLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdePkg/Library/DxeCoreHobLib/DxeCoreHobLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdePkg/Library/DxeCoreEntryPoint/DxeCoreEntryPoint.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Library/BaseBmpSupportLib/BaseBmpSupportLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/GPLDrivers/Library/SimpleInit/src/filesystem/SimpleInitFileSystem.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/GPLDrivers/Library/SimpleInit/src/locate/SimpleInitLocate.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdePkg/Library/UefiUsbLib/UefiUsbLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/ArmPkg/Library/ArmGicArchLib/ArmGicArchLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/ArmPkg/Drivers/ArmGic/ArmGicLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/GPLDrivers/Library/SimpleInit/src/gui/SimpleInitGUI.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Library/BootMaintenanceManagerUiLib/BootMaintenanceManagerUiLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Library/BootManagerUiLib/BootManagerUiLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Library/DeviceManagerUiLib/DeviceManagerUiLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Library/FileExplorerLib/FileExplorerLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Library/UefiBootManagerLib/UefiBootManagerLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Library/DxePerformanceLib/DxePerformanceLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdePkg/Library/BasePeCoffGetEntryPointLib/BasePeCoffGetEntryPointLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Library/UefiSortLib/UefiSortLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Library/VariablePolicyHelperLib/VariablePolicyHelperLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Library/VariablePolicyLib/VariablePolicyLibRuntimeDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Library/BaseVariableFlashInfoLib/BaseVariableFlashInfoLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Library/VarCheckLib/VarCheckLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Library/AuthVariableLibNull/AuthVariableLibNull.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Library/TpmMeasurementLibNull/TpmMeasurementLibNull.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdePkg/Library/DxeServicesTableLib/DxeServicesTableLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdePkg/Library/BaseSynchronizationLib/BaseSynchronizationLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdePkg/Library/BaseSafeIntLib/BaseSafeIntLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/Exynos850Pkg/Library/SOCSmbiosInfoLib/SOCSmbiosInfoLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/GPLDrivers/Library/SimpleInit/libs/LittleVgl.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdePkg/Library/UefiScsiLib/UefiScsiLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/GPLDrivers/Library/SimpleInit/src/linux-boot/SimpleInitBootLinux.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdePkg/Library/BasePeCoffLib/BasePeCoffLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdePkg/Library/BasePeCoffExtraActionLibNull/BasePeCoffExtraActionLibNull.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/GPLDrivers/Library/SimpleInit/src/lib/SimpleInitLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/EmbeddedPkg/Library/FdtLib/FdtLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/GPLDrivers/Library/SimpleInit/libs/compatible/SimpleInitCompatible.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Library/DxeSecurityManagementLib/DxeSecurityManagementLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/EmbeddedPkg/Library/TimeBaseLib/TimeBaseLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/Library/VirtualRealTimeClockLib/VirtualRealTimeClockLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/ArmPkg/Library/ArmSmcLib/ArmSmcLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdePkg/Library/UefiApplicationEntryPoint/UefiApplicationEntryPoint.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdePkg/Library/BasePcdLibNull/BasePcdLibNull.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Library/UefiHiiLib/UefiHiiLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/EmbeddedPkg/Library/DxeDtPlatformDtbLoaderLibDefault/DxeDtPlatformDtbLoaderLibDefault.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Library/UefiHiiServicesLib/UefiHiiServicesLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdePkg/Library/DxeServicesLib/DxeServicesLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/GPLDrivers/Library/SimpleInit/src/SimpleInitRootFS.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdePkg/Library/UefiRuntimeLib/UefiRuntimeLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/Exynos850Pkg/Library/ResetSystemLib/ResetSystemLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/Library/ArmArchTimerLib/ArmArchTimerLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/ArmPkg/Library/ArmGenericTimerVirtCounterLib/ArmGenericTimerVirtCounterLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/GPLDrivers/Library/SimpleInit/libs/libtsm/TSMLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdePkg/Library/BaseStackCheckLib/BaseStackCheckLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdePkg/Library/UefiDriverEntryPoint/UefiDriverEntryPoint.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Library/DxeReportStatusCodeLib/DxeReportStatusCodeLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdePkg/Library/DxeHobLib/DxeHobLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdePkg/Library/UefiLib/UefiLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdePkg/Library/UefiDevicePathLib/UefiDevicePathLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdePkg/Library/UefiMemoryAllocationLib/UefiMemoryAllocationLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdePkg/Library/BaseDebugLibSerialPort/BaseDebugLibSerialPort.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/Library/FrameBufferSerialPortLib/FrameBufferSerialPortLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdePkg/Library/BasePrintLib/BasePrintLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdePkg/Library/BaseDebugPrintErrorLevelLib/BaseDebugPrintErrorLevelLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/ArmPkg/Library/CompilerIntrinsicsLib/CompilerIntrinsicsLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdePkg/Library/BaseIoLibIntrinsic/BaseIoLibIntrinsic.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/ArmPkg/Library/ArmCacheMaintenanceLib/ArmCacheMaintenanceLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdePkg/Library/RegisterFilterLibNull/RegisterFilterLibNull.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/ArmPkg/Library/ArmLib/ArmBaseLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdePkg/Library/BaseMemoryLib/BaseMemoryLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdePkg/Library/DxePcdLib/DxePcdLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdePkg/Library/BaseLib/BaseLib.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/Exynos850Pkg/Drivers/MmcDiagDxe/MmcDiagDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Platform/RenegadePkg/Drivers/LogoDxe/LogoDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/EmbeddedPkg/SimpleTextInOutSerial/SimpleTextInOutSerial.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Bus/Usb/UsbBusDxe/UsbBusDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/Drivers/GenericKeypadDeviceDxe/GenericKeypadDeviceDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/PrePi/PrePi.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Universal/CapsuleRuntimeDxe/CapsuleRuntimeDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/Exynos850Pkg/Application/RegDump/RegDump.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/FatPkg/EnhancedFatDxe/Fat.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/GPLDrivers/Library/SimpleInit/src/main/SimpleInitMain.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Universal/DevicePathDxe/DevicePathDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Universal/DisplayEngineDxe/DisplayEngineDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/Drivers/KeypadDxe/KeypadDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Platform/RenegadePkg/Drivers/SetCPUFreqDxe/SetCPUFreqDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Universal/Disk/DiskIoDxe/DiskIoDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/ArmPkg/Drivers/TimerDxe/TimerDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/ArmPkg/Drivers/CpuDxe/CpuDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/Drivers/ExynosUsbHostDxe/ExynosUsbHostDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Universal/WatchdogTimerDxe/WatchdogTimer.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Universal/Acpi/AcpiPlatformDxe/AcpiPlatformDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Bus/Usb/UsbKbDxe/UsbKbDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Universal/Console/ConSplitterDxe/ConSplitterDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/ExynosPkg/Drivers/SimpleFbDxe/SimpleFbDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Universal/DriverHealthManagerDxe/DriverHealthManagerDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Universal/BdsDxe/BdsDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Universal/FvSimpleFileSystemDxe/FvSimpleFileSystemDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Universal/ReportStatusCodeRouter/RuntimeDxe/ReportStatusCodeRouterRuntimeDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Universal/Disk/PartitionDxe/PartitionDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/ShellPkg/Application/Shell/Shell.inf [AARCH64]
+/usr/bin/aarch64-linux-gnu-ld.bfd: warning: /home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/Build/a145f/RELEASE_CLANG38/AARCH64/Silicon/Samsung/Exynos850Pkg/Application/RegDump/RegDump/DEBUG/RegDump.dll has a LOAD segment with RWX permissions
+objcopy not needed for /home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/Build/a145f/RELEASE_CLANG38/AARCH64/Silicon/Samsung/Exynos850Pkg/Application/RegDump/RegDump/DEBUG/RegDump.dll
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Bus/Usb/UsbMassStorageDxe/UsbMassStorageDxe.inf [AARCH64]
+--strip-unneeded -R .eh_frame /home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/Build/a145f/RELEASE_CLANG38/AARCH64/Silicon/Samsung/Exynos850Pkg/Application/RegDump/RegDump/DEBUG/RegDump.dll
+/home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/Build/a145f/RELEASE_CLANG38/AARCH64/Silicon/Samsung/Exynos850Pkg/Application/RegDump/RegDump/DEBUG/RegDump.dll
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Universal/StatusCodeHandler/RuntimeDxe/StatusCodeHandlerRuntimeDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Universal/PrintDxe/PrintDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Bus/Usb/UsbMouseAbsolutePointerDxe/UsbMouseAbsolutePointerDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Core/Dxe/DxeMain.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Platform/RenegadePkg/Drivers/KernelErrataPatcher/KernelErrataPatcher.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Universal/Acpi/BootGraphicsResourceTableDxe/BootGraphicsResourceTableDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Bus/Pci/NonDiscoverablePciDeviceDxe/NonDiscoverablePciDeviceDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Universal/SetupBrowserDxe/SetupBrowserDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Universal/Console/ConPlatformDxe/ConPlatformDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Bus/Usb/UsbMouseDxe/UsbMouseDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Bus/Scsi/ScsiDiskDxe/ScsiDiskDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Universal/Acpi/AcpiTableDxe/AcpiTableDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/ArmPkg/Drivers/ArmGic/ArmGicDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Application/UiApp/UiApp.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Universal/Variable/RuntimeDxe/VariableRuntimeDxe.inf [AARCH64]
+/usr/bin/aarch64-linux-gnu-ld.bfd: warning: /home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/Build/a145f/RELEASE_CLANG38/AARCH64/Silicon/Samsung/ExynosPkg/PrePi/PrePi/DEBUG/Sec.dll has a LOAD segment with RWX permissions
+objcopy not needed for /home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/Build/a145f/RELEASE_CLANG38/AARCH64/Silicon/Samsung/ExynosPkg/PrePi/PrePi/DEBUG/Sec.dll
+--strip-unneeded -R .eh_frame /home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/Build/a145f/RELEASE_CLANG38/AARCH64/Silicon/Samsung/ExynosPkg/PrePi/PrePi/DEBUG/Sec.dll
+/home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/Build/a145f/RELEASE_CLANG38/AARCH64/Silicon/Samsung/ExynosPkg/PrePi/PrePi/DEBUG/Sec.dll
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Universal/HiiDatabaseDxe/HiiDatabaseDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Platform/RenegadePkg/Drivers/PlatformSmbiosDxe/PlatformSmbiosDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/EmbeddedPkg/EmbeddedMonotonicCounter/EmbeddedMonotonicCounter.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Bus/Scsi/ScsiBusDxe/ScsiBusDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/EmbeddedPkg/MetronomeDxe/MetronomeDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Bus/Pci/PciBusDxe/PciBusDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Core/RuntimeDxe/RuntimeDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/GPLDrivers/Library/SimpleInit/src/kernelfdt/KernelFdtDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Universal/SecurityStubDxe/SecurityStubDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/EmbeddedPkg/RealTimeClockRuntimeDxe/RealTimeClockRuntimeDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/Exynos850Pkg/Drivers/Exynos850MmcBlockIoDxe/Exynos850MmcBlockIoDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Platform/RenegadePkg/Application/RegExplorerApp/RegExplorerApp.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Universal/Console/GraphicsConsoleDxe/GraphicsConsoleDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Platform/RenegadePkg/Application/Reboot2PayloadApp/Reboot2PayloadApp.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Universal/PCD/Dxe/Pcd.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Universal/Disk/UnicodeCollation/EnglishDxe/EnglishDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/EmbeddedPkg/Drivers/DtPlatformDxe/DtPlatformDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Silicon/Samsung/Exynos850Pkg/Drivers/ExynosResetNotifyDxe/ExynosResetNotifyDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Universal/SmbiosDxe/SmbiosDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Bus/Pci/XhciDxe/XhciDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Universal/EsrtFmpDxe/EsrtFmpDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Platform/RenegadePkg/Drivers/Ext4Dxe/Ext4Dxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/EmbeddedPkg/Drivers/VirtualKeyboardDxe/VirtualKeyboardDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Universal/ResetSystemRuntimeDxe/ResetSystemRuntimeDxe.inf [AARCH64]
+Building ... /home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/MdeModulePkg/Universal/Console/TerminalDxe/TerminalDxe.inf [AARCH64]
+/usr/bin/aarch64-linux-gnu-ld.bfd: warning: /home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/Build/a145f/RELEASE_CLANG38/AARCH64/Platform/RenegadePkg/Drivers/PlatformSmbiosDxe/PlatformSmbiosDxe/DEBUG/PlatformSmbiosDxe.dll has a LOAD segment with RWX permissions
+objcopy not needed for /home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/Build/a145f/RELEASE_CLANG38/AARCH64/Platform/RenegadePkg/Drivers/PlatformSmbiosDxe/PlatformSmbiosDxe/DEBUG/PlatformSmbiosDxe.dll
+--strip-unneeded -R .eh_frame /home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/Build/a145f/RELEASE_CLANG38/AARCH64/Platform/RenegadePkg/Drivers/PlatformSmbiosDxe/PlatformSmbiosDxe/DEBUG/PlatformSmbiosDxe.dll
+/home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/Build/a145f/RELEASE_CLANG38/AARCH64/Platform/RenegadePkg/Drivers/PlatformSmbiosDxe/PlatformSmbiosDxe/DEBUG/PlatformSmbiosDxe.dll
+/usr/bin/aarch64-linux-gnu-ld.bfd: warning: /home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/Build/a145f/RELEASE_CLANG38/AARCH64/Silicon/Samsung/Exynos850Pkg/Drivers/ExynosResetNotifyDxe/ExynosResetNotifyDxe/DEBUG/ExynosResetNotifyDxe.dll has a LOAD segment with RWX permissions
+objcopy not needed for /home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/Build/a145f/RELEASE_CLANG38/AARCH64/Silicon/Samsung/Exynos850Pkg/Drivers/ExynosResetNotifyDxe/ExynosResetNotifyDxe/DEBUG/ExynosResetNotifyDxe.dll
+--strip-unneeded -R .eh_frame /home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/Build/a145f/RELEASE_CLANG38/AARCH64/Silicon/Samsung/Exynos850Pkg/Drivers/ExynosResetNotifyDxe/ExynosResetNotifyDxe/DEBUG/ExynosResetNotifyDxe.dll
+/home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/Build/a145f/RELEASE_CLANG38/AARCH64/Silicon/Samsung/Exynos850Pkg/Drivers/ExynosResetNotifyDxe/ExynosResetNotifyDxe/DEBUG/ExynosResetNotifyDxe.dll
+objcopy not needed for /home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/Build/a145f/RELEASE_CLANG38/AARCH64/MdeModulePkg/Universal/ResetSystemRuntimeDxe/ResetSystemRuntimeDxe/DEBUG/ResetSystemRuntimeDxe.dll
+--strip-unneeded -R .eh_frame /home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/Build/a145f/RELEASE_CLANG38/AARCH64/MdeModulePkg/Universal/ResetSystemRuntimeDxe/ResetSystemRuntimeDxe/DEBUG/ResetSystemRuntimeDxe.dll
+/home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/Build/a145f/RELEASE_CLANG38/AARCH64/MdeModulePkg/Universal/ResetSystemRuntimeDxe/ResetSystemRuntimeDxe/DEBUG/ResetSystemRuntimeDxe.dll
+/usr/bin/aarch64-linux-gnu-ld.bfd: warning: /home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/Build/a145f/RELEASE_CLANG38/AARCH64/MdeModulePkg/Universal/BdsDxe/BdsDxe/DEBUG/BdsDxe.dll has a LOAD segment with RWX permissions
+objcopy not needed for /home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/Build/a145f/RELEASE_CLANG38/AARCH64/MdeModulePkg/Universal/BdsDxe/BdsDxe/DEBUG/BdsDxe.dll
+--strip-unneeded -R .eh_frame /home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/Build/a145f/RELEASE_CLANG38/AARCH64/MdeModulePkg/Universal/BdsDxe/BdsDxe/DEBUG/BdsDxe.dll
+/home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/Build/a145f/RELEASE_CLANG38/AARCH64/MdeModulePkg/Universal/BdsDxe/BdsDxe/DEBUG/BdsDxe.dll
+/usr/bin/aarch64-linux-gnu-ld.bfd: warning: /home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/Build/a145f/RELEASE_CLANG38/AARCH64/MdeModulePkg/Application/UiApp/UiApp/DEBUG/UiApp.dll has a LOAD segment with RWX permissions
+objcopy not needed for /home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/Build/a145f/RELEASE_CLANG38/AARCH64/MdeModulePkg/Application/UiApp/UiApp/DEBUG/UiApp.dll
+--strip-unneeded -R .eh_frame /home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/Build/a145f/RELEASE_CLANG38/AARCH64/MdeModulePkg/Application/UiApp/UiApp/DEBUG/UiApp.dll
+/home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/Build/a145f/RELEASE_CLANG38/AARCH64/MdeModulePkg/Application/UiApp/UiApp/DEBUG/UiApp.dll
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/BinWrappers/PosixLike/../../Source/Python/Trim/Trim.py:31: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  gLineControlDirective = re.compile('^\s*#(?:line)?\s+([0-9]+)\s+"*([^"]*)"')
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/BinWrappers/PosixLike/../../Source/Python/Trim/Trim.py:33: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  gTypedefPattern = re.compile("^\s*typedef\s+struct(\s+\w+)?\s*[{]*$", re.MULTILINE)
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/BinWrappers/PosixLike/../../Source/Python/Trim/Trim.py:35: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  gPragmaPattern = re.compile("^\s*#pragma\s+pack", re.MULTILINE)
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/BinWrappers/PosixLike/../../Source/Python/Trim/Trim.py:37: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  gTypedef_SinglePattern = re.compile("^\s*typedef", re.MULTILINE)
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/BinWrappers/PosixLike/../../Source/Python/Trim/Trim.py:39: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  gTypedef_MulPattern = re.compile("^\s*(typedef)?\s+(struct|union)(\s+\w+)?\s*[{]*$", re.MULTILINE)
+/home/gunbileg/Downloads/edk2-exynos850-a145f/Common/edk2/BaseTools/BinWrappers/PosixLike/../../Source/Python/Trim/Trim.py:54: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+  gAslIncludePattern = re.compile("^(\s*)[iI]nclude\s*\(\"?([^\"\(\)]+)\"\)", re.MULTILINE)
+/usr/bin/aarch64-linux-gnu-ld.bfd: warning: /home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/Build/a145f/RELEASE_CLANG38/AARCH64/src/main/SimpleInitMain/DEBUG/SimpleInitMain.dll has a LOAD segment with RWX permissions
+objcopy not needed for /home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/Build/a145f/RELEASE_CLANG38/AARCH64/src/main/SimpleInitMain/DEBUG/SimpleInitMain.dll
+--strip-unneeded -R .eh_frame /home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/Build/a145f/RELEASE_CLANG38/AARCH64/src/main/SimpleInitMain/DEBUG/SimpleInitMain.dll
+/home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/Build/a145f/RELEASE_CLANG38/AARCH64/src/main/SimpleInitMain/DEBUG/SimpleInitMain.dll
+
+Fd File Name:EXYNOS850_UEFI (/home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/Build/a145f/RELEASE_CLANG38/FV/EXYNOS850_UEFI.fd)
+
+Generate Region at Offset 0x0
+   Region Size = 0x700000
+   Region Name = FV
+
+Generating FVMAIN_COMPACT FV
+
+Generating FVMAIN FV
+############
+GUID cross reference file can be found at /home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/Build/a145f/RELEASE_CLANG38/FV/Guid.xref
+
+FV Space Information
+FVMAIN [99%Full] 28764928 (0x1b6eb00) total, 28764912 (0x1b6eaf0) used, 16 (0x10) free
+FVMAIN_COMPACT [79%Full] 7340032 (0x700000) total, 5798968 (0x587c38) used, 1541064 (0x1783c8) free
+
+- Done -
+Build end time: 15:36:03, Oct.17 2026
+Build total time: 00:00:26
+
++ _call_hook platform_build_kernel
++ local NAME=platform_build_kernel
++ shift
++ declare -F platform_build_kernel
++ eval platform_build_kernel
+++ platform_build_kernel
+++ cat /home/gunbileg/Downloads/edk2-exynos850-a145f/tools/BootShim/BootShim.bin /home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/Build/a145f/RELEASE_CLANG38/FV/EXYNOS850_UEFI.fd
+++ cp /home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/Build/a145f/RELEASE_CLANG38/FV/EXYNOS850_UEFI.fd-bootshim /home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/uefi-a145f-kernel
++ return 0
++ _call_hook platform_build_bootimg
++ local NAME=platform_build_bootimg
++ shift
++ declare -F platform_build_bootimg
++ eval platform_build_bootimg
+++ platform_build_bootimg
+++ local UNI=/home/gunbileg/Downloads/edk2-exynos850-a145f/../uniLoader-a145f-bootloader
+++ local OUT=/home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/boot-a145f
+++ '[' -d /home/gunbileg/Downloads/edk2-exynos850-a145f/../uniLoader-a145f-bootloader ']'
+++ '[' -f /run/media/gunbileg/LEAFHDD/uniLoader/a145f-backup/partitions/boot.img ']'
+++ '[' -f /home/gunbileg/Downloads/edk2-exynos850-a145f/../uniLoader-a145f-bootloader/blob/dtb ']'
+++ cp /home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/uefi-a145f-kernel /home/gunbileg/Downloads/edk2-exynos850-a145f/../uniLoader-a145f-bootloader/blob/Image
+++ '[' -f /home/gunbileg/Downloads/edk2-exynos850-a145f/../uniLoader-a145f-bootloader/blob/ramdisk ']'
+++ make -C /home/gunbileg/Downloads/edk2-exynos850-a145f/../uniLoader-a145f-bootloader a145f_defconfig CROSS_COMPILE=aarch64-linux-gnu-
+#
+# configuration written to .config
+#
++++ nproc
+++ make -C /home/gunbileg/Downloads/edk2-exynos850-a145f/../uniLoader-a145f-bootloader -j16 CROSS_COMPILE=aarch64-linux-gnu-
+scripts/kconfig/conf --silentoldconfig Kconfig
+  LDS     arch/aarch64/linker.lds
+  CC      arch/aarch64/load-kernel.o
+  CC      main/boot.o
+  CC      board/samsung/board-a145f.o
+  CC      drivers/framework.o
+  CC      main/main.o
+  CC      drivers/ramdisk-handler.o
+  CC      lib/compiler-rt.o
+  CC      main/boot-fdt.o
+  CC      lib/console/console.o
+  CC      lib/libfdt/fdt.o
+  CC      lib/libfdt/fdt_ro.o
+  CC      lib/libfdt/fdt_rw.o
+  CC      lib/libfdt/fdt_strerror.o
+  CC      lib/libfdt/fdt_sw.o
+  CC      lib/libfdt/fdt_wip.o
+  CC      lib/simplefb/simplefb.o
+  CC      lib/unic/string.o
+  LD      arch/built-in.o
+  LD      main/built-in.o
+  AR      drivers/lib.a
+  AR      board/lib.a
+  AR      lib/lib.a
+  LD      uniLoader.o
+/usr/bin/aarch64-linux-gnu-ld.bfd: warning: uniLoader.o has a LOAD segment with RWX permissions
+  OBJCOPY uniLoader
+  GZIP    uniLoader.gz
+++ python3 /home/gunbileg/Downloads/edk2-exynos850-a145f/tools/a145f/pack_boot_v4.py /home/gunbileg/Downloads/edk2-exynos850-a145f/../uniLoader-a145f-bootloader/uniLoader --stock /run/media/gunbileg/LEAFHDD/uniLoader/a145f-backup/partitions/boot.img -o /home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/boot-a145f.img
+wrote /home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/boot-a145f.img: 7688192 bytes (11% of the 64 MiB boot partition)
+++ mkdir -p /home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/odin
+++ cp /home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/boot-a145f.img /home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/odin/boot.img
+++ cd /home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/odin
+++ tar -H ustar -cf /home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/boot-a145f.tar boot.img
+++ cp /home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/boot-a145f.img /home/gunbileg/Downloads/edk2-exynos850-a145f/boot-a145f.img
+++ echo 'Odin AP file: /home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/boot-a145f.tar'
+Odin AP file: /home/gunbileg/Downloads/edk2-exynos850-a145f/workspace/boot-a145f.tar
++ return 0
++ echo 'Build done: /home/gunbileg/Downloads/edk2-exynos850-a145f/boot-a145f.img'
+Build done: /home/gunbileg/Downloads/edk2-exynos850-a145f/boot-a145f.img
++ false
++ set +x

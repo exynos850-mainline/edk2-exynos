@@ -1,0 +1,27 @@
+## @file
+# PlatformMemoryMapLib
+# 
+# Copyright (c) DuoWoA authors. All rights reserved.
+# Copyright (c) Renegade Project. All rights reserved.
+# SPDX-License-Identifier: BSD-2-Clause-Patent
+##
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = PlatformMemoryMapLibA145f
+  FILE_GUID                      = 7d2f0c4e-3a65-4b8e-9c1a-0a1450850001
+  MODULE_TYPE                    = BASE
+  VERSION_STRING                 = 1.0
+  LIBRARY_CLASS                  = PlatformMemoryMapLib
+
+[Sources]
+  PlatformMemoryMapLibA145f.c
+
+[Packages]
+  ArmPkg/ArmPkg.dec
+  MdePkg/MdePkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+  EmbeddedPkg/EmbeddedPkg.dec
+  Silicon/Samsung/ExynosPkg/ExynosPkg.dec
+
+[LibraryClasses]
+  BaseLib

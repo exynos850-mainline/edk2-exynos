@@ -82,6 +82,7 @@
   gLinuxSimpleMassStorageGuid
   gSwitchSlotsAppFileGuid
   gSimpleInitFileGuid
+  gRegExplorerAppFileGuid
 
 [Protocols]
   gEdkiiNonDiscoverableDeviceProtocolGuid

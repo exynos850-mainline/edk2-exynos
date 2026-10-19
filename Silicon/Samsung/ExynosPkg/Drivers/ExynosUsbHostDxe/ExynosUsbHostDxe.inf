@@ -1,0 +1,46 @@
+# ExynosUsbHostDxe.inf: Exynos850 (Galaxy A14 4G, SM-A145F) USB OTG host bring-up.
+#
+# STAGE 1 (UNTESTED ON HARDWARE): PMU isolation release, USB2 PHY power-up,
+# DWC3 switched to host mode, VBUS (5 V) enabled through the S2MU106 charger,
+# and a register dump. Stage 2 (xHCI hand-off to MdeModulePkg XhciDxe) comes
+# after the dump from this stage shows the controller is alive.
+#
+# Not part of any DSC/FDF by default. See README.md in this directory.
+
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = ExynosUsbHostDxe
+  FILE_GUID                      = 5c1b7a4e-6f3d-4e0a-9b52-7d8e1f2a3c44
+  MODULE_TYPE                    = DXE_DRIVER
+  VERSION_STRING                 = 0.1
+  ENTRY_POINT                    = ExynosUsbHostEntry
+
+[Sources.common]
+  ExynosUsbHostDxe.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+  Silicon/Samsung/ExynosPkg/ExynosPkg.dec
+
+[LibraryClasses]
+  BaseLib
+  DebugLib
+  IoLib
+  PrintLib
+  TimerLib
+  UefiLib
+  UefiBootServicesTableLib
+  NonDiscoverableDeviceRegistrationLib
+  UefiDriverEntryPoint
+
+[BuildOptions]
+  # Set to 0 to skip switching the 5 V VBUS output on (diagnostic dump only).
+  GCC:*_*_*_CC_FLAGS = -DEXYNOS_USB_VBUS=1
+  RVCT:*_*_*_CC_FLAGS = -DEXYNOS_USB_VBUS=1
+
+[Guids]
+  gEfiEventReadyToBootGuid
+
+[Depex]
+  TRUE
