@@ -262,6 +262,25 @@ Ext4ReadFileData (
   OUT    VOID         *Buffer
   );
 
+//
+// Bounded in-place writer: only overwrites bytes within blocks the file
+// already has mapped (Position + *BufferSize must not exceed the file's
+// current size, and every touched logical block must already resolve to a
+// real physical block, i.e. no holes). Never allocates a block, grows the
+// extent tree, or touches i_size/bitmaps/group descriptors - see the
+// comment above its definition in Ext4Disk.c for why. Returns
+// EFI_UNSUPPORTED (and *BufferSize == 0) for anything that would require
+// growing the file or filling in a hole.
+//
+EFI_STATUS
+Ext4WriteFileData (
+  IN     EXT4_VOLUME      *Volume,
+  IN     CONST EXT4_INODE *Inode,
+  IN     UINT64           Position,
+  IN OUT UINTN            *BufferSize,
+  IN     CONST VOID       *Buffer
+  );
+
 EFI_STATUS
 Ext4LookupInDir (
   IN  EXT4_VOLUME  *Volume,

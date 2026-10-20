@@ -1,10 +1,12 @@
 ## @file
-#  Read-only ext4 EFI_SIMPLE_FILE_SYSTEM_PROTOCOL driver.
+#  ext4 EFI_SIMPLE_FILE_SYSTEM_PROTOCOL driver (bounded in-place read/write).
 #
 #  Binds onto any EFI_BLOCK_IO_PROTOCOL/EFI_DISK_IO_PROTOCOL handle (i.e.
-#  any PartitionDxe-exposed partition, including ones on the a145f eMMC
-#  Block I/O driver) whose superblock magic says ext4. See Ext4Dxe.c for
-#  why this exists and Ext4Disk.c for what it does and does not support.
+#  any PartitionDxe-exposed partition, including ones on the a145f eMMC/SD
+#  Block I/O drivers) whose superblock magic says ext4. See Ext4Dxe.c for
+#  why this exists and Ext4Disk.c for what it does and does not support -
+#  in short: writes can overwrite existing file content in place, but never
+#  create/delete/grow a file or touch filesystem metadata.
 #
 #  SPDX-License-Identifier: BSD-2-Clause-Patent
 ##

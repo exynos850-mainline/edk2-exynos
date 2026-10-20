@@ -17,11 +17,18 @@
   Everything that touches the on-disk format lives in Ext4Disk.c; this file
   is the EDK2 driver-model/file-protocol plumbing around it.
 
-  Read-only is a hard design choice, not a missing feature: Write/Delete/
-  SetInfo/create-on-Open all return EFI_WRITE_PROTECTED. A bug in a write
-  path on a filesystem this complex is how you turn "can't boot Fedora"
-  into "ext4 corruption on the only copy of the rootfs" - not worth it for
-  what this driver is for (reading a kernel/initramfs/config at boot time).
+  Write support is bounded on purpose, not absent: Ext4FileWrite can
+  overwrite the content of an existing regular file in place (any byte
+  range already within the file's current size), via Ext4WriteFileData in
+  Ext4Disk.c. What it refuses is anything that would need to change
+  filesystem structure - growing a file, creating or deleting one, writing
+  a directory - because that means touching the extent tree, block/inode
+  bitmaps, group descriptors and i_size, with no journal here to replay if
+  a transfer is interrupted halfway. A bug in THAT path is how you turn
+  "can't boot Fedora" into "ext4 corruption on the only copy of the
+  rootfs". Delete/SetInfo/create-on-Open still return EFI_WRITE_PROTECTED
+  or EFI_UNSUPPORTED for the same reason. Opening for write is also refused
+  outright if the underlying EFI_BLOCK_IO_PROTOCOL reports Media->ReadOnly.
 
   SPDX-License-Identifier: BSD-2-Clause-Patent
 **/
@@ -255,11 +262,22 @@ Ext4FileOpen (
     return EFI_INVALID_PARAMETER;
   }
 
-  if (OpenMode != EFI_FILE_MODE_READ) {
+  if ((OpenMode & ~(EFI_FILE_MODE_READ | EFI_FILE_MODE_WRITE)) != 0) {
+    //
+    // EFI_FILE_MODE_CREATE (or any reserved bit) is refused outright: this
+    // driver never allocates a new inode/directory entry, only overwrites
+    // the content of a file that already exists.
+    //
     return EFI_WRITE_PROTECTED;
   }
 
   Parent = EXT4_OPEN_FILE_FROM_THIS (This);
+
+  if (((OpenMode & EFI_FILE_MODE_WRITE) != 0) &&
+      Parent->Volume->BlockIo->Media->ReadOnly)
+  {
+    return EFI_WRITE_PROTECTED;
+  }
 
   if (FileName[0] == L'\0') {
     Status = Ext4NewOpenFile (Parent->Volume, Parent->InodeNum, &Parent->Inode, L"", &NewFile);
@@ -289,6 +307,17 @@ Ext4FileOpen (
     // target bytes as if they were file content.
     //
     return EFI_NOT_FOUND;
+  }
+
+  if (((OpenMode & EFI_FILE_MODE_WRITE) != 0) &&
+      ((Inode.i_mode & EXT4_S_IFMT) != EXT4_S_IFREG))
+  {
+    //
+    // Write access to a directory (or anything that isn't a plain regular
+    // file) is refused: directory data is filesystem structure, and this
+    // driver's bounded writer only ever overwrites regular-file content.
+    //
+    return EFI_UNSUPPORTED;
   }
 
   Status = Ext4NewOpenFile (Parent->Volume, InodeNum, &Inode, Ext4LastPathComponent (FileName), &NewFile);
@@ -382,7 +411,7 @@ Ext4FileRead (
     Info->Size         = NeededSize;
     Info->FileSize     = Ext4InodeSize (&ChildInode);
     Info->PhysicalSize = (UINT64)ChildInode.i_blocks_lo * 512;
-    Info->Attribute    = EFI_FILE_READ_ONLY;
+    Info->Attribute    = F->Volume->BlockIo->Media->ReadOnly ? EFI_FILE_READ_ONLY : 0;
     if ((ChildInode.i_mode & EXT4_S_IFMT) == EXT4_S_IFDIR) {
       Info->Attribute |= EFI_FILE_DIRECTORY;
     }
@@ -421,7 +450,29 @@ Ext4FileWrite (
   IN     VOID                *Buffer
   )
 {
-  return EFI_WRITE_PROTECTED;
+  EXT4_OPEN_FILE  *F;
+  EFI_STATUS      Status;
+
+  if ((This == NULL) || (BufferSize == NULL)) {
+    return EFI_INVALID_PARAMETER;
+  }
+
+  F = EXT4_OPEN_FILE_FROM_THIS (This);
+
+  if (F->IsDirectory) {
+    return EFI_UNSUPPORTED;
+  }
+
+  if (F->Volume->BlockIo->Media->ReadOnly) {
+    return EFI_WRITE_PROTECTED;
+  }
+
+  Status = Ext4WriteFileData (F->Volume, &F->Inode, F->Position, BufferSize, Buffer);
+  if (!EFI_ERROR (Status)) {
+    F->Position += *BufferSize;
+  }
+
+  return Status;
 }
 
 EFI_STATUS
@@ -494,7 +545,7 @@ Ext4FillFileInfo (
   Info->Size         = NeededSize;
   Info->FileSize     = Ext4InodeSize (&F->Inode);
   Info->PhysicalSize = (UINT64)F->Inode.i_blocks_lo * 512;
-  Info->Attribute    = EFI_FILE_READ_ONLY;
+  Info->Attribute    = F->Volume->BlockIo->Media->ReadOnly ? EFI_FILE_READ_ONLY : 0;
   if (F->IsDirectory) {
     Info->Attribute |= EFI_FILE_DIRECTORY;
   }
@@ -544,7 +595,7 @@ Ext4FileGetInfo (
     FsInfo = (EFI_FILE_SYSTEM_INFO *)Buffer;
     ZeroMem (FsInfo, NeededSize);
     FsInfo->Size        = NeededSize;
-    FsInfo->ReadOnly     = TRUE;
+    FsInfo->ReadOnly     = F->Volume->BlockIo->Media->ReadOnly;
     FsInfo->VolumeSize   = F->Volume->BlocksCount * F->Volume->BlockSize;
     FsInfo->FreeSpace    = F->Volume->FreeBlocksCount * F->Volume->BlockSize;
     FsInfo->BlockSize    = F->Volume->BlockSize;
@@ -602,7 +653,7 @@ Ext4FileFlush (
   IN EFI_FILE_PROTOCOL  *This
   )
 {
-  return EFI_SUCCESS; // nothing is ever dirtied; trivially "flushed"
+  return EFI_SUCCESS; // Ext4FileWrite is write-through (no cache); nothing buffered to flush
 }
 
 STATIC EFI_FILE_PROTOCOL  mExt4FileProtocolTemplate = {

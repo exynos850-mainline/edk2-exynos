@@ -1,10 +1,21 @@
 /** @file
-  Read-only Exynos850 SD-card-slot Block I/O driver.
+  Exynos850 SD-card-slot Block I/O driver (PIO read/write).
 
   Same DesignWare MSHC IP block as the internal eMMC driver
   (Exynos850MmcBlockIoDxe), just the second instance, and the SD protocol
   instead of the eMMC one: CMD8 + ACMD41 (not CMD1), card-assigned RCA from
   CMD3 (not host-assigned), capacity from the CSD register (not EXT_CSD).
+
+  Like the eMMC driver, this now issues real CMD24 (WRITE_BLOCK) writes
+  alongside CMD17 reads - same single-block PIO FIFO path, same post-write
+  DAT0 busy-wait before the next command. One thing this driver deliberately
+  does NOT do: read the SD card's mechanical write-protect notch. That notch
+  is read by the host's own GPIO/switch wiring on most designs, not by any
+  register in this DesignWare MSHC block, and this driver doesn't have a
+  confirmed GPIO for it on this board - so a physically write-protected card
+  will fail the CMD24 itself (R1 card status / CRC/timeout error) rather
+  than being refused up front. That failure is surfaced as EFI_DEVICE_ERROR,
+  same as any other write failure.
 
   Hardware facts below came from the user's own captured live device tree
   (tools/samsung-a145f/live-dtb/stock_live.dtb in the uniLoader repo), not
@@ -86,6 +97,7 @@
 #define CMD_UPDATE_CLOCK           (1U << 21)
 #define CMD_SEND_INIT              (1U << 15)
 #define CMD_WAIT_PREV_DATA         (1U << 13)
+#define CMD_DATA_WRITE             (1U << 10)
 #define CMD_DATA_EXPECTED          (1U << 9)
 #define CMD_RESP_CRC               (1U << 8)
 #define CMD_RESP_LONG              (1U << 7)
@@ -111,6 +123,8 @@
                                    INT_END_BIT_ERROR)
 
 #define STATUS_FIFO_EMPTY          (1U << 2)
+#define STATUS_FIFO_FULL           (1U << 3)
+#define STATUS_DATA_BUSY            (1U << 9)
 
 #define SD_CMD_GO_IDLE              0
 #define SD_CMD_ALL_SEND_CID         2
@@ -118,6 +132,7 @@
 #define SD_CMD_SELECT_CARD          7
 #define SD_CMD_SEND_IF_COND         8
 #define SD_CMD_SEND_CSD             9
+#define SD_CMD_WRITE_BLOCK          24
 #define SD_CMD_APP_CMD              55
 #define SD_ACMD_SD_SEND_OP_COND     41
 
@@ -403,6 +418,107 @@ SdReadSector (
 
 STATIC
 EFI_STATUS
+SdWriteDataCommand (
+  IN  UINT32      Index,
+  IN  UINT32      Argument,
+  IN  UINT32      Flags,
+  IN  CONST VOID  *Buffer,
+  IN  UINTN       BufferSize
+  )
+{
+  EFI_STATUS    Status;
+  UINT32        Interrupts;
+  UINTN         WordIndex;
+  UINTN         WordCount;
+  UINTN         Count;
+  CONST UINT32  *Words;
+
+  if ((Buffer == NULL) || (BufferSize == 0) || ((BufferSize & 3U) != 0)) {
+    return EFI_INVALID_PARAMETER;
+  }
+
+  SdRegWrite (MMC_BLKSIZ, (UINT32)BufferSize);
+  SdRegWrite (MMC_BYTCNT, (UINT32)BufferSize);
+  SdRegWrite (MMC_RINTSTS, 0xffffffffU);
+  SdRegWrite (MMC_CMDARG, Argument);
+  SdRegWrite (MMC_CMD, CMD_START | (Index & 0x3fU) | Flags |
+              CMD_DATA_EXPECTED | CMD_DATA_WRITE);
+
+  // Same FIFO-drain-while-sending approach as the eMMC driver's write path.
+
+  Words     = (CONST UINT32 *)Buffer;
+  WordCount = BufferSize / sizeof (UINT32);
+  for (WordIndex = 0; WordIndex < WordCount; WordIndex++) {
+    for (Count = 0; Count < SD_POLL_LIMIT; Count++) {
+      Interrupts = SdRegRead (MMC_RINTSTS);
+      if ((Interrupts & (INT_COMMAND_ERRORS | INT_DATA_ERRORS)) != 0) {
+        SdRegWrite (MMC_RINTSTS, Interrupts);
+        return EFI_DEVICE_ERROR;
+      }
+      if ((SdRegRead (MMC_STATUS) & STATUS_FIFO_FULL) == 0) {
+        break;
+      }
+    }
+    if (Count == SD_POLL_LIMIT) {
+      return EFI_TIMEOUT;
+    }
+
+    SdRegWrite (MMC_FIFO, Words[WordIndex]);
+  }
+
+  for (Count = 0; Count < SD_POLL_LIMIT; Count++) {
+    Interrupts = SdRegRead (MMC_RINTSTS);
+    if ((Interrupts & (INT_COMMAND_ERRORS | INT_DATA_ERRORS)) != 0) {
+      SdRegWrite (MMC_RINTSTS, Interrupts);
+      return EFI_DEVICE_ERROR;
+    }
+    if ((Interrupts & (INT_DATA_OVER | INT_CMD_DONE)) ==
+        (INT_DATA_OVER | INT_CMD_DONE)) {
+      SdRegWrite (MMC_RINTSTS, Interrupts);
+      break;
+    }
+  }
+  if (Count == SD_POLL_LIMIT) {
+    Status = SdWaitCommandStartClear ();
+    return EFI_ERROR (Status) ? Status : EFI_TIMEOUT;
+  }
+
+  // Wait for the card to release DAT0 (done programming flash) before this
+  // function returns, same reasoning as the eMMC driver's write path - a
+  // write-protected or write-failing card is far more likely on a removable
+  // SD card than on the internal eMMC, so this wait (and its timeout) is the
+  // only signal this driver has that something went wrong post-transfer.
+  for (Count = 0; Count < SD_POLL_LIMIT; Count++) {
+    if ((SdRegRead (MMC_STATUS) & STATUS_DATA_BUSY) == 0) {
+      return EFI_SUCCESS;
+    }
+  }
+
+  return EFI_TIMEOUT;
+}
+
+STATIC
+EFI_STATUS
+SdWriteSector (
+  IN  EFI_LBA     Lba,
+  IN  CONST VOID  *Buffer
+  )
+{
+  if (Lba > 0xffffffffULL) {
+    return EFI_UNSUPPORTED;
+  }
+
+  return SdWriteDataCommand (
+           SD_CMD_WRITE_BLOCK,
+           (UINT32)Lba,
+           CMD_RESP_EXPECT | CMD_RESP_CRC,
+           Buffer,
+           SD_BLOCK_SIZE
+           );
+}
+
+STATIC
+EFI_STATUS
 EFIAPI
 SdBlockIoReset (
   IN EFI_BLOCK_IO_PROTOCOL *This,
@@ -477,12 +593,48 @@ SdBlockIoWriteBlocks (
   IN VOID                  *Buffer
   )
 {
-  (VOID)This;
-  (VOID)MediaId;
-  (VOID)Lba;
-  (VOID)BufferSize;
-  (VOID)Buffer;
-  return EFI_WRITE_PROTECTED;
+  UINTN       BlockCount;
+  UINTN       BlockIndex;
+  EFI_STATUS  Status;
+  CONST UINT8 *Bytes;
+
+  if ((This == NULL) || (Buffer == NULL)) {
+    return EFI_INVALID_PARAMETER;
+  }
+  if (MediaId != This->Media->MediaId) {
+    return EFI_MEDIA_CHANGED;
+  }
+  if (!This->Media->MediaPresent || !mCardReady) {
+    return EFI_NO_MEDIA;
+  }
+  if (This->Media->ReadOnly) {
+    return EFI_WRITE_PROTECTED;
+  }
+  if ((BufferSize % SD_BLOCK_SIZE) != 0) {
+    return EFI_BAD_BUFFER_SIZE;
+  }
+  if (BufferSize == 0) {
+    return EFI_SUCCESS;
+  }
+  if (((UINTN)Buffer & 3U) != 0) {
+    return EFI_INVALID_PARAMETER;
+  }
+
+  BlockCount = BufferSize / SD_BLOCK_SIZE;
+  if ((Lba > This->Media->LastBlock) ||
+      (BlockCount > (UINTN)(This->Media->LastBlock - Lba + 1))) {
+    return EFI_INVALID_PARAMETER;
+  }
+
+  Bytes = (CONST UINT8 *)Buffer;
+  for (BlockIndex = 0; BlockIndex < BlockCount; BlockIndex++) {
+    Status = SdWriteSector (Lba + BlockIndex, Bytes + BlockIndex * SD_BLOCK_SIZE);
+    if (EFI_ERROR (Status)) {
+      return Status;
+    }
+  }
+
+  return EFI_SUCCESS;
 }
 
 STATIC
@@ -723,7 +875,7 @@ Exynos850SdBlockIoEntry (
   mMedia.RemovableMedia = TRUE;
   mMedia.MediaPresent = TRUE;
   mMedia.LogicalPartition = FALSE;
-  mMedia.ReadOnly = TRUE;
+  mMedia.ReadOnly = FALSE;
   mMedia.WriteCaching = FALSE;
   mMedia.BlockSize = SD_BLOCK_SIZE;
   mMedia.IoAlign = 4;
@@ -761,7 +913,8 @@ Exynos850SdBlockIoEntry (
     return EFI_SUCCESS;
   }
 
-  Print (L"[sdcard] Exynos850 SD card online: %lu sectors, %lu MiB; READ-ONLY\n",
+  Print (L"[sdcard] Exynos850 SD card online: %lu sectors, %lu MiB; READ/WRITE "
+         L"(single-block PIO CMD17/CMD24, no DMA, no WP-notch check)\n",
          SectorCount, (SectorCount / 2048));
   Print (L"[sdcard] DiskIoDxe/PartitionDxe can now scan its partition table.\n");
   return EFI_SUCCESS;

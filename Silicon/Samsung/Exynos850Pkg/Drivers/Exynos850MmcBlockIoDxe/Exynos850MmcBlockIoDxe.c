@@ -1,9 +1,18 @@
 /** @file
-  Read-only Exynos850 eMMC Block I/O driver.
+  Exynos850 eMMC Block I/O driver (PIO read/write).
 
   This is a deliberately conservative first-stage driver for the internal eMMC
   on SM-A145F/SM-A145M.  It uses the DesignWare MSHC PIO FIFO (no DMA), exposes
-  a standard EFI_BLOCK_IO_PROTOCOL, and refuses all writes to internal storage.
+  a standard EFI_BLOCK_IO_PROTOCOL, and now issues real CMD24 (WRITE_BLOCK)
+  writes in addition to CMD17 reads - single block at a time, same PIO FIFO
+  path as reads, with a post-write busy-wait on DAT0 so the controller is not
+  handed another command while the card is still programming flash.
+
+  There is still no DMA, no multi-block CMD25/CMD23, and no attempt at
+  wear-leveling or write ordering beyond "one CMD24 per call, in order" - this
+  is a bootloader-stage driver for an eMMC that is this device's only boot/
+  system storage, not a general-purpose high-throughput block device. Being
+  slow and simple here is the point: a bug in a fast path is a bricked phone.
 
   Hardware assumptions validated against the Exynos850 device tree:
     * eMMC DesignWare MSHC base: 0x12100000
@@ -58,6 +67,7 @@
 #define CMD_UPDATE_CLOCK           (1U << 21)
 #define CMD_SEND_INIT              (1U << 15)
 #define CMD_WAIT_PREV_DATA         (1U << 13)
+#define CMD_DATA_WRITE             (1U << 10)
 #define CMD_DATA_EXPECTED          (1U << 9)
 #define CMD_RESP_CRC               (1U << 8)
 #define CMD_RESP_LONG              (1U << 7)
@@ -84,6 +94,7 @@
                                    INT_END_BIT_ERROR)
 
 #define STATUS_FIFO_EMPTY          (1U << 2)
+#define STATUS_FIFO_FULL           (1U << 3)
 #define STATUS_DATA_BUSY            (1U << 9)
 
 #define MMC_CMD_GO_IDLE             0
@@ -92,6 +103,7 @@
 #define MMC_CMD_SET_RELATIVE_ADDR   3
 #define MMC_CMD_SELECT_CARD         7
 #define MMC_CMD_SEND_EXT_CSD        8
+#define MMC_CMD_WRITE_BLOCK         24
 
 #define MMC_OCR_BUSY                (1U << 31)
 #define MMC_OCR_SECTOR_MODE         (1U << 30)
@@ -351,6 +363,111 @@ MmcReadSector (
 
 STATIC
 EFI_STATUS
+MmcWriteDataCommand (
+  IN  UINT32      Index,
+  IN  UINT32      Argument,
+  IN  UINT32      Flags,
+  IN  CONST VOID  *Buffer,
+  IN  UINTN       BufferSize
+  )
+{
+  EFI_STATUS    Status;
+  UINT32        Interrupts;
+  UINTN         WordIndex;
+  UINTN         WordCount;
+  UINTN         Count;
+  CONST UINT32  *Words;
+
+  if ((Buffer == NULL) || (BufferSize == 0) || ((BufferSize & 3U) != 0)) {
+    return EFI_INVALID_PARAMETER;
+  }
+
+  MmcRegWrite (MMC_BLKSIZ, (UINT32)BufferSize);
+  MmcRegWrite (MMC_BYTCNT, (UINT32)BufferSize);
+  MmcRegWrite (MMC_RINTSTS, 0xffffffffU);
+  MmcRegWrite (MMC_CMDARG, Argument);
+  MmcRegWrite (MMC_CMD, CMD_START | (Index & 0x3fU) | Flags |
+               CMD_DATA_EXPECTED | CMD_DATA_WRITE);
+
+  // Mirror of MmcReadDataCommand's drain loop: push into the FIFO while the
+  // card is ready to accept it rather than waiting for CMD_DONE first, same
+  // 64-word-deep-FIFO reasoning as the read path.
+
+  Words     = (CONST UINT32 *)Buffer;
+  WordCount = BufferSize / sizeof (UINT32);
+  for (WordIndex = 0; WordIndex < WordCount; WordIndex++) {
+    for (Count = 0; Count < MMC_POLL_LIMIT; Count++) {
+      Interrupts = MmcRegRead (MMC_RINTSTS);
+      if ((Interrupts & (INT_COMMAND_ERRORS | INT_DATA_ERRORS)) != 0) {
+        MmcRegWrite (MMC_RINTSTS, Interrupts);
+        return EFI_DEVICE_ERROR;
+      }
+      if ((MmcRegRead (MMC_STATUS) & STATUS_FIFO_FULL) == 0) {
+        break;
+      }
+    }
+    if (Count == MMC_POLL_LIMIT) {
+      return EFI_TIMEOUT;
+    }
+
+    MmcRegWrite (MMC_FIFO, Words[WordIndex]);
+  }
+
+  for (Count = 0; Count < MMC_POLL_LIMIT; Count++) {
+    Interrupts = MmcRegRead (MMC_RINTSTS);
+    if ((Interrupts & (INT_COMMAND_ERRORS | INT_DATA_ERRORS)) != 0) {
+      MmcRegWrite (MMC_RINTSTS, Interrupts);
+      return EFI_DEVICE_ERROR;
+    }
+    if ((Interrupts & (INT_DATA_OVER | INT_CMD_DONE)) ==
+        (INT_DATA_OVER | INT_CMD_DONE)) {
+      MmcRegWrite (MMC_RINTSTS, Interrupts);
+      break;
+    }
+  }
+  if (Count == MMC_POLL_LIMIT) {
+    Status = MmcWaitCommandStartClear ();
+    return EFI_ERROR (Status) ? Status : EFI_TIMEOUT;
+  }
+
+  // CMD24 has an R1 response but the card keeps DAT0 held busy while it
+  // actually programs flash, well after DATA_OVER/CMD_DONE post. Wait here,
+  // next to the write that caused it, instead of making every caller of
+  // WriteBlocks remember to check for card busy before its next command.
+  for (Count = 0; Count < MMC_POLL_LIMIT; Count++) {
+    if ((MmcRegRead (MMC_STATUS) & STATUS_DATA_BUSY) == 0) {
+      return EFI_SUCCESS;
+    }
+  }
+
+  return EFI_TIMEOUT;
+}
+
+STATIC
+EFI_STATUS
+MmcWriteSector (
+  IN  EFI_LBA     Lba,
+  IN  CONST VOID  *Buffer
+  )
+{
+  UINT32 Argument;
+
+  if (Lba > 0xffffffffULL) {
+    return EFI_UNSUPPORTED;
+  }
+
+  Argument = (UINT32)Lba;  // Same sector-mode addressing CMD1 confirmed for reads.
+  return MmcWriteDataCommand (
+           MMC_CMD_WRITE_BLOCK,
+           Argument,
+           CMD_RESP_EXPECT | CMD_RESP_CRC,
+           Buffer,
+           MMC_BLOCK_SIZE
+           );
+}
+
+STATIC
+EFI_STATUS
 EFIAPI
 MmcBlockIoReset (
   IN EFI_BLOCK_IO_PROTOCOL *This,
@@ -425,12 +542,48 @@ MmcBlockIoWriteBlocks (
   IN VOID                  *Buffer
   )
 {
-  (VOID)This;
-  (VOID)MediaId;
-  (VOID)Lba;
-  (VOID)BufferSize;
-  (VOID)Buffer;
-  return EFI_WRITE_PROTECTED;
+  UINTN       BlockCount;
+  UINTN       BlockIndex;
+  EFI_STATUS  Status;
+  CONST UINT8 *Bytes;
+
+  if ((This == NULL) || (Buffer == NULL)) {
+    return EFI_INVALID_PARAMETER;
+  }
+  if (MediaId != This->Media->MediaId) {
+    return EFI_MEDIA_CHANGED;
+  }
+  if (!This->Media->MediaPresent || !mCardReady) {
+    return EFI_NO_MEDIA;
+  }
+  if (This->Media->ReadOnly) {
+    return EFI_WRITE_PROTECTED;
+  }
+  if ((BufferSize % MMC_BLOCK_SIZE) != 0) {
+    return EFI_BAD_BUFFER_SIZE;
+  }
+  if (BufferSize == 0) {
+    return EFI_SUCCESS;
+  }
+  if (((UINTN)Buffer & 3U) != 0) {
+    return EFI_INVALID_PARAMETER;
+  }
+
+  BlockCount = BufferSize / MMC_BLOCK_SIZE;
+  if ((Lba > This->Media->LastBlock) ||
+      (BlockCount > (UINTN)(This->Media->LastBlock - Lba + 1))) {
+    return EFI_INVALID_PARAMETER;
+  }
+
+  Bytes = (CONST UINT8 *)Buffer;
+  for (BlockIndex = 0; BlockIndex < BlockCount; BlockIndex++) {
+    Status = MmcWriteSector (Lba + BlockIndex, Bytes + BlockIndex * MMC_BLOCK_SIZE);
+    if (EFI_ERROR (Status)) {
+      return Status;
+    }
+  }
+
+  return EFI_SUCCESS;
 }
 
 STATIC
@@ -643,7 +796,7 @@ Exynos850MmcBlockIoEntry (
   mMedia.RemovableMedia = FALSE;
   mMedia.MediaPresent = TRUE;
   mMedia.LogicalPartition = FALSE;
-  mMedia.ReadOnly = TRUE;
+  mMedia.ReadOnly = FALSE;
   mMedia.WriteCaching = FALSE;
   mMedia.BlockSize = MMC_BLOCK_SIZE;
   mMedia.IoAlign = 4;
@@ -681,7 +834,8 @@ Exynos850MmcBlockIoEntry (
     return EFI_SUCCESS;
   }
 
-  Print (L"[emmc] Exynos850 eMMC online: %lu sectors, %lu MiB; READ-ONLY\n",
+  Print (L"[emmc] Exynos850 eMMC online: %lu sectors, %lu MiB; READ/WRITE "
+         L"(single-block PIO CMD17/CMD24, no DMA)\n",
          SectorCount, (SectorCount / 2048));
   Print (L"[emmc] DiskIoDxe/PartitionDxe can now scan its partition table.\n");
   return EFI_SUCCESS;

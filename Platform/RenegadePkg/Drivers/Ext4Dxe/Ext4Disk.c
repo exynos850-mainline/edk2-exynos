@@ -3,7 +3,18 @@
   legacy indirect-block mapping, directory entry iteration.
 
   Scope, on purpose:
-   - Read-only. Nothing here ever writes a sector.
+   - Reads are unrestricted. Writes are deliberately bounded: Ext4WriteFileData
+     only overwrites bytes inside blocks a file already has mapped - it never
+     allocates a new block, extends an extent, edits the extent tree, touches
+     a block/inode bitmap or group descriptor, or changes i_size. No journal
+     replay exists here either, so anything that could leave metadata
+     half-updated is simply refused (EFI_UNSUPPORTED) instead of attempted.
+     That rules out creating, deleting, renaming or growing a file - but
+     overwriting the content of an existing file in place (a config file, a
+     boot script, patching bytes within an existing kernel/initramfs image)
+     works and cannot corrupt the filesystem structure, because no
+     filesystem structure is ever touched - only the data blocks the file
+     already owns.
    - Both extent-mapped files (the mkfs.ext4 default since e2fsprogs ~1.42,
      i.e. basically everything made in the last decade) and legacy
      direct/single-indirect block-mapped files are supported. Double and
@@ -76,6 +87,32 @@ Ext4ReadBlock (
   }
 
   return Ext4ReadDisk (Volume, BlockNum * Volume->BlockSize, Volume->BlockSize, Buffer);
+}
+
+STATIC
+EFI_STATUS
+Ext4WriteBlock (
+  IN  EXT4_VOLUME  *Volume,
+  IN  UINT64       BlockNum,
+  IN  CONST VOID   *Buffer
+  )
+{
+  if (BlockNum == 0) {
+    //
+    // Block 0 is reserved/boot area; a caller asking to write the "hole"
+    // sentinel block number is a bug in this file, not a valid request -
+    // Ext4WriteFileData refuses holes before ever reaching here.
+    //
+    return EFI_INVALID_PARAMETER;
+  }
+
+  return Volume->DiskIo->WriteDisk (
+                            Volume->DiskIo,
+                            Volume->BlockIo->Media->MediaId,
+                            BlockNum * Volume->BlockSize,
+                            Volume->BlockSize,
+                            (VOID *)Buffer
+                            );
 }
 
 UINT64
@@ -574,6 +611,106 @@ Ext4ReadFileData (
   // it - the caller sees the short read via the returned *BufferSize.
   //
   return (Done > 0) ? EFI_SUCCESS : Status;
+}
+
+EFI_STATUS
+Ext4WriteFileData (
+  IN     EXT4_VOLUME       *Volume,
+  IN     CONST EXT4_INODE  *Inode,
+  IN     UINT64            Position,
+  IN OUT UINTN             *BufferSize,
+  IN     CONST VOID        *Buffer
+  )
+{
+  UINT64       FileSize;
+  UINTN        Remaining;
+  UINTN        Done;
+  CONST UINT8  *In;
+  UINT8        *BlockBuf;
+  EFI_STATUS   Status;
+
+  FileSize = Ext4InodeSize (Inode);
+
+  //
+  // See the file header comment: this writer only overwrites bytes inside
+  // blocks the file already has mapped. Writing past the current end of the
+  // file, or into a hole inside it, would mean allocating a real block -
+  // something this driver deliberately never does - so both are refused
+  // up front rather than partially attempted.
+  //
+  if ((Position >= FileSize) || (Position + *BufferSize > FileSize)) {
+    *BufferSize = 0;
+    return EFI_UNSUPPORTED;
+  }
+
+  Remaining = *BufferSize;
+  BlockBuf  = AllocatePool (Volume->BlockSize);
+  if (BlockBuf == NULL) {
+    return EFI_OUT_OF_RESOURCES;
+  }
+
+  In     = Buffer;
+  Done   = 0;
+  Status = EFI_SUCCESS;
+
+  while (Remaining > 0) {
+    UINT32  LBlock;
+    UINT32  InBlockOffset;
+    UINTN   Chunk;
+    UINT64  PBlock;
+
+    LBlock        = (UINT32)(Position / Volume->BlockSize);
+    InBlockOffset = (UINT32)(Position % Volume->BlockSize);
+    Chunk         = Volume->BlockSize - InBlockOffset;
+    if (Chunk > Remaining) {
+      Chunk = Remaining;
+    }
+
+    Status = Ext4MapBlock (Volume, Inode, LBlock, &PBlock);
+    if (EFI_ERROR (Status)) {
+      break;
+    }
+
+    if (PBlock == 0) {
+      // A hole inside the file's current length: refuse rather than
+      // allocate a block for it.
+      Status = EFI_UNSUPPORTED;
+      break;
+    }
+
+    if (Chunk != Volume->BlockSize) {
+      //
+      // Partial block: read-modify-write so the bytes outside the caller's
+      // range (before InBlockOffset, or after InBlockOffset + Chunk) are
+      // preserved instead of zeroed.
+      //
+      Status = Ext4ReadBlock (Volume, PBlock, BlockBuf);
+      if (EFI_ERROR (Status)) {
+        break;
+      }
+    }
+
+    CopyMem (BlockBuf + InBlockOffset, In + Done, Chunk);
+
+    Status = Ext4WriteBlock (Volume, PBlock, BlockBuf);
+    if (EFI_ERROR (Status)) {
+      break;
+    }
+
+    Position  += Chunk;
+    Done      += Chunk;
+    Remaining -= Chunk;
+  }
+
+  FreePool (BlockBuf);
+  *BufferSize = Done;
+  //
+  // Unlike the reader, a short write here means some bytes were already
+  // physically committed to disk before the error - that can't be undone,
+  // so the caller needs the real Done count via *BufferSize, with Status
+  // telling it why the write stopped early.
+  //
+  return (Remaining == 0) ? EFI_SUCCESS : Status;
 }
 
 EFI_STATUS
